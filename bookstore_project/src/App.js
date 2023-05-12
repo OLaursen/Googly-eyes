@@ -1,8 +1,12 @@
+import { Box } from '@mui/material';
 import Button from '@mui/material/Button';
+import { NavBar } from './Components/NavBar';
 
 function App() {
   return (
-    <Button variant="contained">Hello</Button>
+    <Box>
+      <NavBar></NavBar>
+    </Box>
 
   );
 }
