@@ -1,11 +1,22 @@
-import { Box } from '@mui/material';
-import Button from '@mui/material/Button';
+import { Box, Stack } from '@mui/material';
 import { NavBar } from './Components/NavBar';
+import Sidebar from './Components/Sidebar';
+import Feed from './Components/ContentCard';
+import Rightbar from './Components/Rightbar';
+import ContentCarousel from './Components/ContentCarousel';
+import ContentCard from './Components/ContentCard';
+
 
 function App() {
   return (
     <Box>
-      <NavBar></NavBar>
+      <NavBar/>
+      <Stack direction ="row" spacing={2} justifyContent="space-between">
+        <Sidebar/>
+        <Feed/>
+        <Rightbar />
+      </Stack>
+      
     </Box>
 
   );
