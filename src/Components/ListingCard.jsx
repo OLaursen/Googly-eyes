@@ -1,12 +1,6 @@
 import React from "react";
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import { Box } from "@mui/system";
-import CardHeader from '@mui/material/CardHeader';
-import { Avatar, CardMedia, IconButton } from "@mui/material";
+import { CardMedia, IconButton, CardHeader, Typography, Button, Card, CardActions, CardContent } from "@mui/material";
 import ShareIcon from '@mui/icons-material/Share';
 
 

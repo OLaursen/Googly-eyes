@@ -1,26 +1,26 @@
 import React from 'react'
-import ContentCard from "./ContentCard";
 import { Grid, Typography } from '@mui/material';
 import ListingCard from './ListingCard';
+import bookList from "./dummybook.js";
 
-const ContentCarousel = () => {
+
+
+const ContentCarousel = CarouselInfo => {
+    const getListingCard = listingobj =>{
+        return <Grid item xs={6} sm={6} md={3}><ListingCard {...listingobj} /></Grid>
+    }
+    const {category} = CarouselInfo
     return(
     <Grid container direction="row" spacing={2} justifyContent={"center"}>
 
     <Grid item xs={12} >
         <Typography label="carousel-header" variant='h6'>
-                Display the carousel category here
+                {category}
         </Typography>
     </Grid>
-        
-    <Grid item xs={12} sm={6} md={3}>
-         <ListingCard title="Book title" author="Oli" price="500" description="This is my book" condition="As new" pictureSrc="https://play-lh.googleusercontent.com/_tslXR7zUXgzpiZI9t70ywHqWAxwMi8LLSfx8Ab4Mq4NUTHMjFNxVMwTM1G0Q-XNU80" SellerUsername="Trustworty" location="Copenhagen" />
+    
+    {bookList.map(listingobj => getListingCard(listingobj))}
     </Grid>
-
-     
-     
-
-</Grid>
 
 )}
 
