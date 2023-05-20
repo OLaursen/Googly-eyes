@@ -1,11 +1,15 @@
-import { AppBar, Avatar, Box, ButtonGroup, IconButton, InputBase, Menu, MenuItem, Toolbar, Typography, styled } from '@mui/material'
+import { AppBar, Avatar, Box, ButtonGroup, Icon, IconButton, InputBase, Menu, MenuItem, Toolbar, Typography, makeStyles, styled } from '@mui/material'
 import MenuBookIcon from '@mui/icons-material/MenuBook'
 import React from 'react'
 import { theme } from '../theme';
 import { AccountCircle, StayPrimaryLandscape } from '@mui/icons-material';
 import SearchIcon from '@mui/icons-material/Search';
+import MenuIcon from '@mui/icons-material/Menu';
+import AddCircleTwoToneIcon from '@mui/icons-material/AddCircleTwoTone';
 
 export const NavBar = () => {
+
+//--------- (Avatar) Profilemenu functions: -----------//
 const [anchorEl, setAnchorEl] = React.useState(null);
 
 const handleProfileMenu = (event) => {
@@ -15,48 +19,61 @@ const handleProfileMenu = (event) => {
 const handleCloseProfileMenu = () => {
   setAnchorEl(null);
 };
-const StyledToolbar = styled(Toolbar)({
-  display: "flex",
-  justifyContent: "space-between",
+//----------------------------------------------------//
+
+
+//------------------------CSS-------------------------//
+//Costumizing "Toolbar"
+const StyledToolbar = styled("Toolbar")({
+      display: "flex",
+      justifyContent: "space-between"
+      
 });
+
+//Making "Search" from "Box" component
 const Search = styled(Box)(({ theme }) => ({
   backgroundColor: "white",
   padding: "0 10px",
   borderRadius: theme.shape.borderRadius,
   width: "20%",
 }));
+//----------------------------------------------------//
 
 
   
   return (
     <React.Fragment>
         <AppBar  position="sticky" sx={{background: ""}}>
-            <StyledToolbar spacing={2}>
-                <Typography variant="h6" sx={{display:{xs:"none", sm:"none", md:"block"}}}>
-                  Usedbooks By Ommm...
-                </Typography>
-                <MenuBookIcon sx={{display:{xs:"block", sm:"block", md:"none"}}}/>
+            <StyledToolbar spacing={2} justifyContent="space-between" display="">
 
-                <Search sx={{display:{xs:"none", sm:"none", md:"block"}}}>
-                  <SearchIcon/>
-                  <InputBase placeholder='Find your next book here...'/>
-                </Search>
               
+                <IconButton size="large" aria-label="addlisting-icon" color="inherit">
+                    <AddCircleTwoToneIcon />
+                </IconButton>
               
+                  
+                 <IconButton color="inherit" aria-label="logo-icon">
+                    <MenuBookIcon  size="large" sx={{display:{xs:"block", sm:"block", md:"none"}}}/>
+                    <Typography variant="h6" sx={{display:{xs:"none", sm:"none", md:"block"}}}>
+                          Usedbooks By Ommm...
+                    </Typography>
+                </IconButton>
+                    
+                  
                 
-              
-
-              <Box sx={{display:{}}}>
-
-              
-                <ButtonGroup>
-
-                  <Box sx={{display:{sm:"block", md:"none"}}} >
-                    <IconButton size="large" aria-label="search-icon" color="inherit">
-                    <SearchIcon/>
-                    </IconButton>
-                  </Box>
+                
+                <Search sx={{display:{xs:"none", md:"none", lg:"inline"}}}>
+                    <SearchIcon color='primary'/>
+                    <InputBase color="secondary" placeholder='Find your next book here...'/>
+                </Search>
                
+                
+
+                <IconButton size="large" aria-label="menu-icon" color="inherit" sx={{display:{md:"block", lg:"none"}}}>
+                    <MenuIcon />
+                </IconButton>
+              
+              <Box label="icon-cluster" sx={{display:{xs:"none", sm:"none", md:"none", lg:"inline-flex"}}}>
 
                 <IconButton
                   size="large"
@@ -69,8 +86,6 @@ const Search = styled(Box)(({ theme }) => ({
                   <AccountCircle />
                 </IconButton>
                
-
-                </ButtonGroup>
                 <Menu
                   id="menu-appbar"
                   anchorEl={anchorEl}

@@ -1,28 +1,27 @@
 import React from 'react'
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import ContentCard from "./ContentCard";
-import { Grid } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
+import ListingCard from './ListingCard';
 
 const ContentCarousel = () => {
-    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 12, sm: 8, md: 4 }} justifyContent={"center"} >
-        
-        <Grid item xs={12} sm={6} md={3}>
-            <ContentCard />
-        </Grid>
+    return(
+    <Grid container direction="row" spacing={2} justifyContent={"center"}>
 
-        <Grid item xs={12} sm={6} md={3}>
-            <ContentCard />
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={3}>
-            <ContentCard />
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={3}>
-            <ContentCard />
-        </Grid>         
-    
+    <Grid item xs={12} >
+        <Typography label="carousel-header" variant='h6'>
+                Display the carousel category here
+        </Typography>
     </Grid>
-}
+        
+    <Grid item xs={12} sm={6} md={3}>
+         <ListingCard title="Book title" author="Oli" price="500" description="This is my book" condition="As new" pictureSrc="https://play-lh.googleusercontent.com/_tslXR7zUXgzpiZI9t70ywHqWAxwMi8LLSfx8Ab4Mq4NUTHMjFNxVMwTM1G0Q-XNU80" SellerUsername="Trustworty" location="Copenhagen" />
+    </Grid>
+
+     
+     
+
+</Grid>
+
+)}
 
 export default ContentCarousel

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import pic from "./Pics/book.jpg"
 import {Card, CardHeader, CardMedia, CardContent, CardActions, Avatar, IconButton, Typography, styled, Box, Checkbox, StepLabel } from '@mui/material';
 import { FavoriteBorder, MoreVert} from '@mui/icons-material';
 import ShareIcon from '@mui/icons-material/Share';
@@ -8,7 +7,7 @@ import SmsIcon from '@mui/icons-material/Sms';
 
 
 
-const ContentCard = () => {
+export const ContentCard = () => {
     return(
         <Box flexGrow={1}>
 
@@ -25,8 +24,8 @@ const ContentCard = () => {
                     </IconButton>
 
                     }
-                    title="IT-Projekt arbejde"
-                    subheader="Saturday 13th, 2023"
+                    title="{Title} by {auhtor}"
+                    subheader="Condition: {stand}"
                     />
                 <CardMedia
                     component="img"
@@ -38,7 +37,7 @@ const ContentCard = () => {
 
                 <box id="pricetag">
                     <Typography variant='h6' color="text.secondary">
-                        225kr
+                        Price DKK
                     </Typography>
                 </box>
                 

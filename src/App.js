@@ -1,10 +1,8 @@
 import { Box, Stack } from '@mui/material';
 import { NavBar } from './Components/NavBar';
 import Sidebar from './Components/Sidebar';
-import Feed from './Components/ContentCard';
+import Feed from './Components/Feed';
 import Rightbar from './Components/Rightbar';
-import ContentCarousel from './Components/ContentCarousel';
-import ContentCard from './Components/ContentCard';
 
 
 function App() {
@@ -12,9 +10,9 @@ function App() {
     <Box>
       <NavBar/>
       <Stack direction ="row" spacing={2} justifyContent="space-between">
-        <Sidebar/>
-        <Feed/>
-        <Rightbar />
+          <Sidebar />
+          <Feed />
+          <Rightbar />
       </Stack>
       
     </Box>
