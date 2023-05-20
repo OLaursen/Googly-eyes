@@ -50,7 +50,7 @@ const ListingCard = salesInfo =>{
       );
 
     return(
-        <Box sx={{ minWidth: 275 }}>
+        <Box sx={{}}>
             <Card variant="outlined">{card}</Card>
         </Box>
 
