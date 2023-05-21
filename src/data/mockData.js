@@ -4,7 +4,7 @@ export default[
         author: "Robert Sedgewick and Kevin Wayne",
         price: "450",
         description: "Books on algorithms, used for one semester",
-        condition: "Used, with notes written in it",
+        condition: "Poor",
         pictureSrc: "https://sedgewick.io/wp-content/uploads/2020/07/Algorithms-Robert-Sedgewick-Kevin-Wayne.jpg",
         SellerUsername: "SWU4lyfe",
         location: "Amager"
@@ -25,7 +25,7 @@ export default[
         author: "Susanna S. Epp",
         price: "350",
         description: "Used at ITU",
-        condition: "Rough",
+        condition: "Poor",
         pictureSrc: "https://imgcdn.saxo.com/_9780357114087",
         SellerUsername: "xXxMathishardxXx",
         location: "Bornholm"
@@ -35,7 +35,7 @@ export default[
         author: "Preben Madsen",
         price: "260",
         description: "Price is negotiable",
-        condition: "Used",
+        condition: "Good",
         pictureSrc: "https://content.gucca.dk/screenshots/original/s/t/statik-og-styrkelaere_458364_1.jpg",
         SellerUsername: "PM123",
         location: "Slesvig"
@@ -55,10 +55,11 @@ export default[
         author: "Steve Parker",
         price: "75",
         description: "",
-        condition: "Barely used",
+        condition: "Good",
         pictureSrc: "https://www.politikensforlag.dk/_cover_media/original/9788756784436.jpg",
         SellerUsername: "ChrisInTheMix?",
         location: "Aalborg"
     },
+    
 
 ]

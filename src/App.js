@@ -1,21 +1,29 @@
 import { Box, Stack } from '@mui/material';
-import { NavBar } from './Components/NavBar';
-import Sidebar from './Components/Sidebar';
-import Feed from './Components/Feed';
-import Rightbar from './Components/Rightbar';
+import Sidebar from './Components/SideBar';
+import Listings from './Components/ContentGrid/Feed';
+import Rightbar from './Components/RightBar';
+import { useEffect } from 'react';
+import { Container } from '@mui/system';
+import Customnavbar from './Components/NavBar/index';
 
 
 function App() {
+  //Makes browser declare page.
+  useEffect(()=>{
+    document.title ="Ommm - Home"
+  })
   return (
-    <Box>
-      <NavBar/>
-      <Stack direction ="row" spacing={2} justifyContent="space-between">
+    //<Container maxWidth="xl">
+    <Box sx={{background: "#fff"}} >
+    <Customnavbar/>
+    <Stack direction ="row" spacing={2} justifyContent="space-between">
           <Sidebar />
-          <Feed />
+          <Listings />
           <Rightbar />
       </Stack>
-      
     </Box>
+      
+   // </Container>
 
   );
 }

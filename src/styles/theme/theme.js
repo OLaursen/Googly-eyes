@@ -1,6 +1,6 @@
 import React from "react";
 import { createTheme } from "@mui/material";
-import { Height } from "@mui/icons-material";
+
 
 export const theme = createTheme({
     palette: {
@@ -30,8 +30,22 @@ export const theme = createTheme({
         //Contrast needs to be at least 4.5:1 inorder to satisfiy WCAG(Accessibility)
         contrastThreshold: 4.5,
     },
-    img: {
+    components:{
+        MuiCardMediamedia:{
+            styleOverrides:{
+                root:{
+                    objectFit: "cover",
+                }
+
+            }
+        },
+        MuiCard:{
+            styleOverrides:{
+                maxWidth:"300px",
+                maxHeight:"300px",
+                
+            }
+        }
         
     }
-    
-})
+    })

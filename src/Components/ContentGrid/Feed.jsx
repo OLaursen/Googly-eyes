@@ -1,4 +1,4 @@
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import ContentCarousel from "./ContentCarousel";
 
 import styled from "@emotion/styled";
@@ -11,14 +11,15 @@ export const Feed = () => {
   
     
     return(
-    <Box flex={4} p={2}>
+    <Box flex={8} p={2}>
         
             <Grid container label="feed-grid" direction="column">
                 
-                <Grid item xs={12} justifyContent={"center"}>
+                <Grid item xs={12} display="flex" justifyContent={"center"} sx={{backgroundColor: "" }}>
                     <Typography variant="h4">
                         Discover or rediscover listings....
                     </Typography>
+                    <Divider />
                 </Grid>
 
                 <Grid item>
