@@ -1,10 +1,8 @@
 import React from 'react'
 import { Box, Stack } from '@mui/material';
 import Sidebar from '../SideBar';
-import Listings from '../ContentGrid';
 import Feed from '../ContentGrid';
 import Rightbar from '../RightBar/index';
-import Footer from '../Footer';
 
 export default class Home extends React.Component {
     render() {
