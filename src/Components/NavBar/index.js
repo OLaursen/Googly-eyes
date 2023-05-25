@@ -10,16 +10,30 @@ import AddCircleTwoToneIcon from '@mui/icons-material/AddCircleTwoTone';
 function Customnavbar() {
 
   //--------- (Avatar) Profilemenu functions: -----------//
-  const [anchorEl, setAnchorEl] = React.useState(null);
+   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleProfileMenu = (event) => {
-    setAnchorEl(event.currentTarget);
+   const handleProfileMenu = (event) => {
+     setAnchorEl(event.currentTarget);
+   };
+
+   const handleCloseProfileMenu = () => {
+     setAnchorEl(null);
+   };
+  //----------------------------------------------------//
+
+  //--------- (Burger) Burgermenu Functionality: -----------//
+  const [anchorBurger, setAnchorBurger] = React.useState(null);
+  const openBurger = Boolean(anchorBurger);
+
+  const handleClickBurgerMenu = (event) => {
+    setAnchorBurger(event.currentTarget);
   };
 
-  const handleCloseProfileMenu = () => {
-    setAnchorEl(null);
+  const handleCloseBurgerMenu = () => {
+    setAnchorBurger(null);
   };
   //----------------------------------------------------//
+
   //------------------------CSS-------------------------//
   //Costumizing "Toolbar"
   const StyledToolbar = styled("Toolbar")({
@@ -35,15 +49,19 @@ function Customnavbar() {
     width: "20%",
   }));
   //----------------------------------------------------//
+
   return (
     <React.Fragment>
       <AppBar position="sticky" sx={{ background: "" }}>
-        <StyledToolbar spacing={2} justifyContent="space-between" display="">
+        <StyledToolbar spacing={2} justifyContent="space-between" display="flex">
 
 
-          <IconButton size="large" aria-label="addlisting-icon" color="inherit">
+          <IconButton size="large" aria-label="addlisting-icon" color="inherit"
+            >
             <AddCircleTwoToneIcon />
           </IconButton>
+
+          
 
 
           <IconButton color="inherit" aria-label="logo-icon">
@@ -61,11 +79,43 @@ function Customnavbar() {
             <InputBase color="secondary" placeholder='Find your next book here...' />
           </Search> */}
 
+         
+
+          <IconButton id="menu-button" size="large" aria-label="menu-icon" color="inherit" sx={{ display: { md: "inline", lg: "none" } }}
+          aria-controls={openBurger ? 'BurgerMenu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={openBurger ? 'true' : undefined} 
+          onClick={handleClickBurgerMenu}
+          >
+            <MenuIcon id="menu-icon" />
+          </IconButton> 
+
+          <Menu
+            id='BurgerMenu'
+            aria-labelledby='menu-icon'
+            anchorEl="menu-icon"
+            open={openBurger}
+            onClose={handleCloseBurgerMenu}
+            //MenuListProps={{'aria-labelledby' : 'menu-button',}}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'right'
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right'
+
+            }}
+
+            >
+              <MenuItem onClick={handleCloseBurgerMenu}>Profile</MenuItem>
+              <MenuItem onClick={handleCloseBurgerMenu}>MyListings</MenuItem>
+              <MenuItem onClick={handleCloseBurgerMenu}>Inbox</MenuItem>
+
+          </Menu>
 
 
-          <IconButton size="large" aria-label="menu-icon" color="inherit" sx={{ display: { md: "block", lg: "none" } }}>
-            <MenuIcon />
-          </IconButton>
+
 
           <Box label="icon-cluster" sx={{ display: { xs: "none", sm: "none", md: "none", lg: "inline-flex" } }}>
 
