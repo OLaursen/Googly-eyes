@@ -11,7 +11,7 @@ export const ContentCard = () => {
     return(
         <Box flexGrow={1}>
 
-        <Card >
+        <Card>
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
