@@ -109,7 +109,7 @@ function Customnavbar() {
             }}
             transformOrigin={{
               vertical: 'top',
-              horizontal: ''
+              horizontal: 'right'
 
             }}
 
