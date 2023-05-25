@@ -3,9 +3,11 @@ import Sidebar from './Components/SideBar';
 import Listings from './Components/ContentGrid/Feed';
 import Rightbar from './Components/RightBar';
 import { useEffect } from 'react';
+import { useState } from 'react';
 import { Container } from '@mui/system';
 import Customnavbar from './Components/NavBar/index';
 
+const [user, setUser] = useState();
 
 function App() {
   //Makes browser declare page.
