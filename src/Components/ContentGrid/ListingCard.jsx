@@ -33,6 +33,7 @@ const ListingCard = (listingobj) =>{
         subheader={listingobj.author}
         />
         {/* <ListingImage src={listingobj.pictureSrc} /> */}
+        
         <CardMedia sx={{ 
           height: "150px", objectFit:"cover"
           }} 

@@ -1,12 +1,12 @@
-import { Box, Stack } from '@mui/material';
-import Sidebar from './Components/SideBar';
-import Listings from './Components/ContentGrid/Feed';
-import Rightbar from './Components/RightBar';
 import { useEffect } from 'react';
-import { useState } from 'react';
 import { Container } from '@mui/system';
 import Customnavbar from './Components/NavBar/index';
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Components/pages/home';
+import Customnavbar from './Components/NavBar';
+import Footer from './Components/Footer';
+import { useState } from 'react';
 const [user, setUser] = useState();
 
 function App() {
@@ -15,18 +15,15 @@ function App() {
     document.title ="Ommm - Home"
   })
   return (
-    //<Container maxWidth="xl">
-    <Box sx={{background: "#fff"}} >
-    <Customnavbar/>
-    <Stack direction ="row" spacing={2} justifyContent="space-between">
-          <Sidebar />
-          <Listings />
-          <Rightbar />
-      </Stack>
-    </Box>
-      
-   // </Container>
-
+    <>
+      <Customnavbar />
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </Router>
+      <Footer />
+    </>
   );
 }
 
