@@ -34,6 +34,12 @@ function Customnavbar() {
   };
   //----------------------------------------------------//
 
+  //-----------------(plus) Create listing--------------//
+
+  
+
+  //----------------------------------------------------//
+
   //------------------------CSS-------------------------//
   //Costumizing "Toolbar"
   const StyledToolbar = styled("Toolbar")({
@@ -103,7 +109,7 @@ function Customnavbar() {
             }}
             transformOrigin={{
               vertical: 'top',
-              horizontal: 'right'
+              horizontal: ''
 
             }}
 

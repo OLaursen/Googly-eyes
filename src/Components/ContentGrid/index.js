@@ -23,14 +23,9 @@ export const Feed = () => {
                 </Grid>
 
                 <Grid item>
-                    <ContentCarousel category="You might like this..." />
+                    <ContentCarousel category="" />
                 </Grid>
-                <Grid item>
-                    <ContentCarousel category="Visited recently..." />
-                </Grid>
-                <Grid item>
-                    <ContentCarousel category="Favorites.." />
-                </Grid>
+                
 
             </Grid>
     
