@@ -1,7 +1,4 @@
 import { useEffect } from 'react';
-import { Container } from '@mui/system';
-import Customnavbar from './Components/NavBar/index';
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Components/pages/home';
 import Customnavbar from './Components/NavBar';
