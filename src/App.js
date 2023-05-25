@@ -1,6 +1,6 @@
 import { Box, Stack } from '@mui/material';
 import Sidebar from './Components/SideBar';
-import Feed from './Components/ContentGrid/Feed';
+import Feed from './Components/ContentGrid';
 import Rightbar from './Components/RightBar';
 import { useEffect } from 'react';
 import { Container } from '@mui/system';
