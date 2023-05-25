@@ -1,0 +1,16 @@
+GET /api/users
+GET /api/users/1
+PUT /api/users/1
+DELETE /api/users/1
+POST /api/users
+
+Where 1 is ID
+
+If ID is given in url, then omit from passed information.
+e.g. GET /api/users/1 returns name ´´;
+
+urls vi skal have API til:
+users
+books
+
+Messages(?)
