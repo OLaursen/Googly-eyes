@@ -36,7 +36,7 @@ function Customnavbar() {
 
   //-----------------(plus) Create listing--------------//
 
-  
+
 
   //----------------------------------------------------//
 
@@ -87,7 +87,7 @@ function Customnavbar() {
 
          
 
-          <IconButton id="menu-button" size="large" aria-label="menu-icon" color="inherit" sx={{ display: { md: "inline", lg: "none" } }}
+          <IconButton id="menu-button" size="large" aria-label="menu-button" color="inherit" sx={{ display: { sm: "inline", md: "none" } }}
           aria-controls={openBurger ? 'BurgerMenu' : undefined}
           aria-haspopup="true"
           aria-expanded={openBurger ? 'true' : undefined} 
@@ -95,7 +95,7 @@ function Customnavbar() {
           >
             <MenuIcon id="menu-icon" />
           </IconButton> 
-
+          {/* Burgermenu menu */}
           <Menu
             id='BurgerMenu'
             aria-labelledby='menu-icon'
@@ -123,9 +123,10 @@ function Customnavbar() {
 
 
 
-          <Box label="icon-cluster" sx={{ display: { xs: "none", sm: "none", md: "none", lg: "inline-flex" } }}>
+          <Box label="icon-cluster" sx={{ display: { xs:"none", md: "inline-flex" } }}>
 
             <IconButton
+            label="profile-avatar"
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -137,16 +138,16 @@ function Customnavbar() {
             </IconButton>
 
             <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
+              id="profile-avatar-menu"
+              anchorEl={"profile-avatar"}
               anchorOrigin={{
-                vertical: 'center',
-                horizontal: 'left',
+                vertical: 'top',
+                horizontal: 'right',
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'center',
-                horizontal: 'left',
+                vertical: 'top',
+                horizontal: 'right',
               }}
               open={Boolean(anchorEl)}
               onClose={handleCloseProfileMenu}
