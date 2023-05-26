@@ -128,7 +128,8 @@ const NavBar = () => {
           <MenuIcon />
         </Hamburger>
       </StyledToolbar>
-
+      
+      {/* Profile/Avatar Menu */}
       <Menu
         id="avatar-menu"
         open={openAvatarMenu}
@@ -147,6 +148,7 @@ const NavBar = () => {
         <MenuItem onClick={handleCloseBurgerMenu}>Logout</MenuItem>
       </Menu>
 
+      {/* BurgerMenu */}
       <Menu
         id="Burger-Menu"
         aria-labelledby="Burger-menu"
