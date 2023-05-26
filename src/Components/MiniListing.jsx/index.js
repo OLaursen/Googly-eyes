@@ -41,14 +41,12 @@ const SingleListing = (listingobj) => {
                         
              <CardActions>
                 <Grid container direction="row" justifyContent={"space-between"}>
-                <Grid item>
-                <Button size="small" variant="outlined" color="secondary">Expand</Button>
-
-                </Grid>
-                <Grid item>
-                <Button size="small" variant="outlined" color="secondary">Contact Seller</Button>    
-                </Grid>
-
+                <Button size="small" variant="outlined" color="secondary">
+                    Expand
+                    </Button>
+                <Button size="small" variant="outlined" color="secondary">
+                    Contact Seller
+                    </Button>    
                 </Grid>
             </CardActions> 
             
