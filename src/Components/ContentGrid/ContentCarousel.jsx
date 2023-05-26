@@ -2,15 +2,17 @@ import React from 'react'
 import { Divider, Grid, Typography } from '@mui/material';
 import ListingCard from './ListingCard';
 import bookList from "../../data/mockData";
+import SingleListing from '../SingleListing';
 
 
 
 const ContentCarousel = CarouselInfo => {
     const getListingCard = bookList.map((listingobj) => (
-        <Grid item key={listingobj.id} sm={6} md={4} display="flex" flexDirection={"column"} alignItems="center">
-                <ListingCard {...listingobj} />
-
+        <Grid item key={listingobj.id} xs={12} sm={6} md={4} alignItems="center">
+                 {/* <ListingCard {...listingobj} />  */}
+                <SingleListing {...listingobj} /> 
         </Grid>
+
     ));
 
 

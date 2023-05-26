@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/system";
-import { IconButton, CardHeader, Typography, Card, CardActions, CardContent, Grid, Checkbox, StepLabel, CardMedia } from "@mui/material";
+import { IconButton, CardHeader, Typography, Card, CardActions, CardContent, Grid, Checkbox, StepLabel, CardMedia, useTheme } from "@mui/material";
 import ShareIcon from '@mui/icons-material/Share';
 import SmsIcon from "@mui/icons-material/Sms";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -12,7 +12,7 @@ import { ListingImage } from "../../styles/ContentGrid";
 
 
 const ListingCard = (listingobj) =>{
-    
+    const theme = useTheme();
       
     const card = (
       <React.Fragment>
@@ -33,7 +33,7 @@ const ListingCard = (listingobj) =>{
         subheader={listingobj.author}
         />
         {/* <ListingImage src={listingobj.pictureSrc} /> */}
-        
+
         <CardMedia sx={{ 
           height: "150px", objectFit:"cover"
           }} 
@@ -53,7 +53,10 @@ const ListingCard = (listingobj) =>{
               Condtion: {listingobj.condition}
             </Typography>
             <Typography variant="body2">
-                User: {listingobj.SellerUsername} "{listingobj.description}"
+                User: {listingobj.SellerUsername} 
+                <br />
+
+                "{listingobj.description}"
               
             </Typography>
           </CardContent>
@@ -78,9 +81,8 @@ const ListingCard = (listingobj) =>{
       );
 
     return(
-        <Box sx={{}}>
             <Card variant="outlined">{card}</Card>
-        </Box>
+        
 
     )
 }

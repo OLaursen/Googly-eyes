@@ -21,7 +21,7 @@ export default[
         location: "Roskilde"
     },
     {
-        title: "Discrete Mathematics with Applications - Metric version, fifth edition",
+        title: "Discrete Mathematics with Applications, fifth edition",
         author: "Susanna S. Epp",
         price: "350",
         description: "Used at ITU",
@@ -60,6 +60,19 @@ export default[
         SellerUsername: "ChrisInTheMix?",
         location: "Aalborg"
     },
+
+    {
+        title:"A life of misery in A minor.",
+        author: "Ben Webster",
+        price: "Priceless",
+        description: "A tale told by the legend himself, RIP.",
+        condition: "Remarkable",
+        pictureSrc: "https://storage.googleapis.com/www.ar-tour.com/users/244dd922-0974-4339-a510-f828d078bb0f/images/temp/main/svks-ul6u-oqv7-efjt.jpg",
+        SellerUsername:"AFanInGMajor",
+        location: "Assistens Kirkegård"
+
+    },
+
     
 
 ]

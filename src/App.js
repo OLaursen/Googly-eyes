@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Components/pages/home';
 import Customnavbar from './Components/NavBar';
 import Footer from './Components/Footer';
+import { Box, Container } from '@mui/material';
 
 function App() {
   //Makes browser declare page.
@@ -11,7 +12,7 @@ function App() {
     document.title ="Ommm - Home"
   })
   return (
-    <>
+    <Box>
       <Customnavbar />
       <Router>
         <Routes>
@@ -19,7 +20,7 @@ function App() {
         </Routes>
       </Router>
       <Footer />
-    </>
+    </Box>
   );
 }
 
