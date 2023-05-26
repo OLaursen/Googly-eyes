@@ -4,22 +4,23 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Components/pages/home';
 import Customnavbar from './Components/NavBar';
 import Footer from './Components/Footer';
+import NavBar from './Components/NavBar/NavBar';
 
 function App() {
   //Makes browser declare page.
-  useEffect(()=>{
-    document.title ="Ommm - Home"
+  useEffect(() => {
+    document.title = "Ommm - Home"
   })
   return (
     <>
-      <Customnavbar />
+      <NavBar/>
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
         </Routes>
       </Router>
-      <Footer />
-    </>
+      <Footer/>
+    /</>
   );
 }
 

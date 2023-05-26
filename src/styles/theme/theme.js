@@ -5,24 +5,24 @@ import { createTheme } from "@mui/material";
 export const theme = createTheme({
     palette: {
         primary:{
-            main:"rgb(137, 97, 49)",
+            main:"rgb(83, 113, 136)",
             //darker:"#896131"
         }, 
 
         secondary: {
-            main:"rgb(130, 72, 91)",
+            main:"rgb(203, 178, 121)",
             //darker: "#82485B"
         },
 
         tertiary: {
             //roseda green, picked from theme
-            main:"rgb(110, 117, 97)",
+            main:"rgb(225, 212, 187)",
             //darker: "#6E7561" 
         },
 
         fourthiary: {
             //greyish
-            main: "rgb(150, 169, 173)",
+            main: "rgb(238, 238, 238)",
             //darker: "#536C71"
         },
 
