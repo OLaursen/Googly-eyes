@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box, Stack } from '@mui/material';
-import Sidebar from '../SideBar';
-import Feed from '../ContentGrid';
-import Rightbar from '../RightBar/index';
+import Sidebar from '../Components/SideBar';
+import Feed from '../Components/ContentGrid';
+import Rightbar from '../Components/RightBar/index';
 
 export default class Home extends React.Component {
     render() {
