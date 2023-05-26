@@ -129,34 +129,23 @@ const NavBar = () => {
         </Hamburger>
       </StyledToolbar>
 
-      <div>
-        <IconButton
-          label="avatar-menu"
-          aria-label="account of current user"
-          aria-controls="menu-appbar"
-          aria-haspopup="true"
-          onClick={handleClickProfileMenu}
-          color="inherit"
-        ></IconButton>
-
-        <Menu
-          id="avatar-menu"
-          open={openAvatarMenu}
-          onClose={handleCloseAvatarMenu}
-          anchorOrigin={{
-            vertical: "top",
-            horizontal: "right",
-          }}
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "right",
-          }}
-        >
-          <MenuItem onClick={handleCloseBurgerMenu}>Profile</MenuItem>
-          <MenuItem onClick={handleCloseBurgerMenu}>My Listings</MenuItem>
-          <MenuItem onClick={handleCloseBurgerMenu}>Logout</MenuItem>
-        </Menu>
-      </div>
+      <Menu
+        id="avatar-menu"
+        open={openAvatarMenu}
+        onClose={handleCloseAvatarMenu}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+      >
+        <MenuItem onClick={handleCloseBurgerMenu}>Profile</MenuItem>
+        <MenuItem onClick={handleCloseBurgerMenu}>My Listings</MenuItem>
+        <MenuItem onClick={handleCloseBurgerMenu}>Logout</MenuItem>
+      </Menu>
 
       <Menu
         id="Burger-Menu"
