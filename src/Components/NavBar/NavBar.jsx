@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import {
   AutoStoriesTwoTone,
+  Forum,
   Notifications,
   QuestionAnswerOutlined,
   Sell,
@@ -25,11 +26,13 @@ import { theme } from "../../styles/theme/theme";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
-  justifyContent: "space-between",
+  justifyContent: "space-between"
 });
 
 const Search = styled(Box)(({ theme }) => ({
   backgroundColor: "white",
+  display: "flex",
+  justifyContent: "center",
   padding: "0 10px",
   borderRadius: theme.shape.borderRadius,
   width: "30%",
@@ -39,26 +42,28 @@ const Icons = styled(Box)(({ theme }) => ({
   display: "none",
   alignItems: "center",
   gap: "20px",
-  [theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.up("md")]: {
     display: "flex",
+    justifyContent: "right",
+  },
+  [theme.breakpoints.down("lg")]: {
+    gap: "30px"
   },
 }));
 
 const IconItem = styled(Box)(({ theme }) => ({
-  display: "none",
+  display: "flex",
   alignItems: "center",
   gap: "10px",
-  [theme.breakpoints.up("sm")]: {
-    display: "flex",
-  },
 }));
 
 const Hamburger = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   gap: "10px",
-  [theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.up("md")]: {
     display: "none",
+
   },
 }));
 
@@ -88,17 +93,27 @@ const NavBar = () => {
   return (
     <AppBar position="sticky">
       <StyledToolbar>
-        <Typography variant="h5" sx={{ display: { xs: "none", sm: "block" } }}>
-          reBook
-        </Typography>
+        <Box display={"flex"} gap={"10px"}>
+          <AutoStoriesTwoTone sx={{ fontSize: 30 }} />
+          <Typography
+            variant="h5"
+            sx={{
+              [theme.breakpoints.down("md")]: {
+                display: "none",
+              },
+            }}
+          >
+            ReBook
+          </Typography>
+        </Box>
 
+        {/* 
         <Icons>
           <Badge color="error" badgeContent="5" variant="dot">
             <Notifications color="accent" />
           </Badge>
         </Icons>
-
-        <AutoStoriesTwoTone sx={{ display: { xs: "black", sm: "none" } }} />
+        */}
 
         <Search>
           <InputBase
@@ -109,26 +124,44 @@ const NavBar = () => {
 
         <Icons>
           <IconItem>
-            <Button variant="contained">Create Listing</Button>
+            <Button variant="contained" color="secondary" borderRadius={theme.shape.borderRadius}>Create Listing</Button>
           </IconItem>
           <IconItem>
             <Sell />
-            <Typography>My Listings</Typography>
+            <Typography
+              sx={{
+                [theme.breakpoints.down("lg")]: {
+                  display: "none",
+                },
+              }}
+              className="icon-text"
+            >
+              My Listings
+            </Typography>
           </IconItem>
           <IconItem>
             <Badge color="error" badgeContent="5">
-              <QuestionAnswerOutlined color="accent" />
+              <Forum color="accent" />
             </Badge>
-            <Typography variant="span">Inbox</Typography>
+            <Typography
+              sx={{
+                [theme.breakpoints.down("lg")]: {
+                  display: "none",
+                },
+              }}
+              variant="span"
+            >
+              Inbox
+            </Typography>
           </IconItem>
           <Avatar onClick={handleClickProfileMenu}></Avatar>
         </Icons>
 
         <Hamburger onClick={handleClickBurgerMenu}>
-          <MenuIcon />
+          <MenuIcon fontSize="large" />
         </Hamburger>
       </StyledToolbar>
-      
+
       {/* Profile/Avatar Menu */}
       <Menu
         id="avatar-menu"

@@ -4,7 +4,7 @@ import { theme } from "../../styles/theme/theme"
 
 const Rightbar = () => {
     return(
-        <Box bgcolor={"grey"} flex={2} p={1} sx={{display: {xs: "none", lg: "block"}}}>Right bar</Box>
+        <Box bgcolor={"inherit"} flex={2} p={1} sx={{display: {xs: "none", lg: "block"}}}></Box>
     )
 }
 
