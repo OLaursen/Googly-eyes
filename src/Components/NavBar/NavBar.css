@@ -3,8 +3,12 @@
     text-decoration: none;
 }
 .link :hover {
-    color: sienna;
+    color: rgb(203, 178, 121);
 }
+.badge :hover {
+    pointer-events: none;
+}
+
 
 #home-logo {
     color: #fff;

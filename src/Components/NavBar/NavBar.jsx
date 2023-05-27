@@ -110,14 +110,6 @@ const NavBar = () => {
           </Box>
         </Link>
 
-        {/* 
-        <Icons>
-          <Badge color="error" badgeContent="5" variant="dot">
-            <Notifications color="accent" />
-          </Badge>
-        </Icons>
-        */}
-
         <Search>
           <InputBase
             fullWidth="true"
@@ -129,6 +121,7 @@ const NavBar = () => {
           <IconItem>
             <Link to={"/create-listing"}>
               <Button
+                className="Button"
                 variant="contained"
                 color="secondary"
                 borderRadius={theme.shape.borderRadius}
@@ -137,6 +130,7 @@ const NavBar = () => {
               </Button>
             </Link>
           </IconItem>
+
           <Link className="link" to={"/my-listings"}>
             <IconItem>
               <Sell />
@@ -152,22 +146,28 @@ const NavBar = () => {
               </Typography>
             </IconItem>
           </Link>
-          <IconItem>
-            <Badge color="error" badgeContent="5">
-              <Forum color="accent" />
-            </Badge>
-            <Typography
-              sx={{
-                [theme.breakpoints.down("lg")]: {
-                  display: "none",
-                },
-              }}
-              variant="span"
-            >
-              Inbox
-            </Typography>
-          </IconItem>
-          <Avatar onClick={handleClickProfileMenu}></Avatar>
+          <Link className="link" to={"/inbox"}>
+            <IconItem>
+              <Badge className="badge" color="error" badgeContent="5">
+                <Forum color="accent" />
+              </Badge>
+              <Typography
+                sx={{
+                  [theme.breakpoints.down("lg")]: {
+                    display: "none",
+                  },
+                }}
+                variant="span"
+              >
+                Inbox
+              </Typography>
+            </IconItem>
+          </Link>
+          <Avatar
+            className="avatar"
+            onClick={handleClickProfileMenu}
+            src="https://www.socialdemokratiet.dk/media/ox2hyghg/mette.jpg?format=webp&width=500&height=500&mode=crop&quality=80&center=0.50125313283208017,0.4949874686716792"
+          ></Avatar>
         </Icons>
 
         <Hamburger onClick={handleClickBurgerMenu}>

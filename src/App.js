@@ -6,6 +6,7 @@ import Footer from './Components/Footer';
 import NavBar from './Components/NavBar/NavBar';
 import MyListings from './pages/my_listings';
 import CreateListing from './pages/create_listing';
+import { Inbox } from '@mui/icons-material';
 
 function App() {
   //Makes browser declare page.
@@ -18,8 +19,9 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/my-listings' element={<MyListings/>} />
           <Route path='/create-listing' element={<CreateListing />} />
+          <Route path='/my-listings' element={<MyListings/>} />
+          <Route path='/inbox' element={<Inbox />} />
         </Routes>
         <Footer />
       </Router>
