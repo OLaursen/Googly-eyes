@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import "./NavBar.css";
 import {
   AutoStoriesTwoTone,
   Forum,
@@ -27,7 +28,7 @@ import { Link } from "react-router-dom";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
-  justifyContent: "space-between"
+  justifyContent: "space-between",
 });
 
 const Search = styled(Box)(({ theme }) => ({
@@ -48,7 +49,7 @@ const Icons = styled(Box)(({ theme }) => ({
     justifyContent: "right",
   },
   [theme.breakpoints.down("lg")]: {
-    gap: "30px"
+    gap: "30px",
   },
 }));
 
@@ -64,7 +65,6 @@ const Hamburger = styled(Box)(({ theme }) => ({
   gap: "10px",
   [theme.breakpoints.up("md")]: {
     display: "none",
-
   },
 }));
 
@@ -94,6 +94,7 @@ const NavBar = () => {
   return (
     <AppBar position="sticky">
       <StyledToolbar>
+        <Link id="home-logo" to={"/"}>
           <Box display={"flex"} gap={"10px"}>
             <AutoStoriesTwoTone sx={{ fontSize: 30 }} />
             <Typography
@@ -107,7 +108,8 @@ const NavBar = () => {
               ReBook
             </Typography>
           </Box>
-      
+        </Link>
+
         {/* 
         <Icons>
           <Badge color="error" badgeContent="5" variant="dot">
@@ -125,27 +127,31 @@ const NavBar = () => {
 
         <Icons>
           <IconItem>
-            <Button
-              variant="contained"
-              color="secondary"
-              borderRadius={theme.shape.borderRadius}
-            >
-              Create Listing
-            </Button>
+            <Link to={"/create-listing"}>
+              <Button
+                variant="contained"
+                color="secondary"
+                borderRadius={theme.shape.borderRadius}
+              >
+                Create Listing
+              </Button>
+            </Link>
           </IconItem>
-          <IconItem>
-            <Sell />
-            <Typography
-              sx={{
-                [theme.breakpoints.down("lg")]: {
-                  display: "none",
-                },
-              }}
-              className="icon-text"
-            >
-              My Listings
-            </Typography>
-          </IconItem>
+          <Link className="link" to={"/my-listings"}>
+            <IconItem>
+              <Sell />
+              <Typography
+                sx={{
+                  [theme.breakpoints.down("lg")]: {
+                    display: "none",
+                  },
+                }}
+                className="icon-text"
+              >
+                My Listings
+              </Typography>
+            </IconItem>
+          </Link>
           <IconItem>
             <Badge color="error" badgeContent="5">
               <Forum color="accent" />
