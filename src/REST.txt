@@ -14,3 +14,10 @@ users
 books
 
 Messages(?)
+
+Man skal kunne:
+
+Oprette en bruger
+
+Hente en liste af listings
+Oprette en ny listing
