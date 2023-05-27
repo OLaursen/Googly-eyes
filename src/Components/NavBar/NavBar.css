@@ -3,7 +3,18 @@
     text-decoration: none;
 }
 .link :hover {
+<<<<<<< Updated upstream
     color: rgb(203, 178, 121);
+=======
+    animation-name: link;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes link {
+    from {color: #fff;}
+    to {color: rgb(203, 178, 121)}
+>>>>>>> Stashed changes
 }
 .badge :hover {
     pointer-events: none;
