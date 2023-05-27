@@ -23,6 +23,7 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import { theme } from "../../styles/theme/theme";
+import { Link } from "react-router-dom";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -93,20 +94,20 @@ const NavBar = () => {
   return (
     <AppBar position="sticky">
       <StyledToolbar>
-        <Box display={"flex"} gap={"10px"}>
-          <AutoStoriesTwoTone sx={{ fontSize: 30 }} />
-          <Typography
-            variant="h5"
-            sx={{
-              [theme.breakpoints.down("md")]: {
-                display: "none",
-              },
-            }}
-          >
-            ReBook
-          </Typography>
-        </Box>
-
+          <Box display={"flex"} gap={"10px"}>
+            <AutoStoriesTwoTone sx={{ fontSize: 30 }} />
+            <Typography
+              variant="h5"
+              sx={{
+                [theme.breakpoints.down("md")]: {
+                  display: "none",
+                },
+              }}
+            >
+              ReBook
+            </Typography>
+          </Box>
+      
         {/* 
         <Icons>
           <Badge color="error" badgeContent="5" variant="dot">
@@ -124,7 +125,13 @@ const NavBar = () => {
 
         <Icons>
           <IconItem>
-            <Button variant="contained" color="secondary" borderRadius={theme.shape.borderRadius}>Create Listing</Button>
+            <Button
+              variant="contained"
+              color="secondary"
+              borderRadius={theme.shape.borderRadius}
+            >
+              Create Listing
+            </Button>
           </IconItem>
           <IconItem>
             <Sell />
