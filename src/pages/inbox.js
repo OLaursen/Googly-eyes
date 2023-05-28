@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import NavBar from '../Components/NavBar/NavBar'
 
-export default class Inbox extends React.Component {
+export default class InboxPage extends React.Component {
     render() {
         return (
             <>
-                <Link to={"/"}>
-                    <h1>THIS IS THE INBOX</h1>
-                </Link>
+                <NavBar />
+                <h1>Bob</h1>
             </>
         )
     }
