@@ -133,12 +133,13 @@ function Customnavbar() {
               aria-haspopup="true"
               onClick={handleProfileMenu}
               color="inherit"
-            >
-              <AccountCircle />
+            ><AccountCircle />
             </IconButton>
 
             <Menu
               id="profile-avatar-menu"
+              open={Boolean(anchorEl)}
+              onClose={handleCloseProfileMenu}
               anchorEl={"profile-avatar"}
               anchorOrigin={{
                 vertical: 'top',
@@ -149,8 +150,7 @@ function Customnavbar() {
                 vertical: 'top',
                 horizontal: 'right',
               }}
-              open={Boolean(anchorEl)}
-              onClose={handleCloseProfileMenu}
+              
             >
               <MenuItem onClick={handleCloseProfileMenu}>Profile</MenuItem>
               <MenuItem onClick={handleCloseProfileMenu}>My account</MenuItem>

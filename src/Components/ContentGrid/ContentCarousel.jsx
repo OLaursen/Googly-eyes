@@ -1,34 +1,31 @@
 import React from 'react'
 import { Divider, Grid, Typography } from '@mui/material';
-import ListingCard from './ListingCard';
-import bookList from "../../data/mockData";
+import data from "../../data/listingData";
+import MiniListing from './MiniListing';
 
+const ContentCarousel = (CarouselInfo) => {
+  const getListings = data.map((listingobj) => (
+    <Grid item key={listingobj.id} xs={12} sm={6} md={4} alignItems="center">
+      <MiniListing {...listingobj} />
+    </Grid>
+  ));
 
-
-const ContentCarousel = CarouselInfo => {
-    const getListingCard = bookList.map((listingobj) => (
-        <Grid item key={listingobj.id} sm={6} md={4} display="flex" flexDirection={"column"} alignItems="center">
-                <ListingCard {...listingobj} />
-
-        </Grid>
-    ));
-
-
-    const {category} = CarouselInfo
-    return(
+  const { category } = CarouselInfo;
+  return (
+    <>
+    <Divider role="presentation" flexItem></Divider>
     <Grid container direction="row" spacing={2} justifyContent={"center"}>
-        <Divider variant="middle" role="presentation" flexItem></Divider>
-    <Grid item xs={12} >
-        <Typography label="carousel-header" variant='h6'>
-                {category}
+      
+      <Grid item xs={12}>
+        <Typography label="carousel-header" variant="h6">
+          {category}
         </Typography>
-    </Grid>
-    
-    {getListingCard}
-    
-    
-    </Grid>
+      </Grid>
 
-)}
+      {getListings}
+    </Grid>
+    </>
+  );
+};
 
-export default ContentCarousel
+export default ContentCarousel;
