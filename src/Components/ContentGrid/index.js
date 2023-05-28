@@ -10,8 +10,8 @@ export const Feed = () => {
         
             <Grid container label="feed-grid" direction="column">
                 
-                <Grid item xs={12} display="flex" justifyContent={"center"} sx={{backgroundColor: "" }}>
-                    <Typography variant="h4">
+                <Grid item xs={12} display="flex" justifyContent={"flex-start"} sx={{backgroundColor: "" }}>
+                    <Typography variant="h4" fontWeight={"bold"}>
                         Discover or rediscover listings....
                     </Typography>
                     <Divider />
