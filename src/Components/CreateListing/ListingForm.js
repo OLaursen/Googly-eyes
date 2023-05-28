@@ -4,26 +4,35 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import { Select } from '@mui/material';
+
 
 //Heavily inspired by MUI Template found at:
 //https://github.com/mui/material-ui/blob/v5.13.1/docs/data/material/getting-started/templates/checkout/AddressForm.js
 
-//title, author, price, description, condition, pictureSrc, SellerUsername, location
-export default function AddressForm() {
+
+
+
+
+export function ListingForm() {
   return (
-    <React.Fragment>
+    <>
       <Typography variant="h6" gutterBottom>
-        Shipping address
+        Create Listing
       </Typography>
-      <Grid container spacing={3}>
+
+      <Grid container spacing={3} justify-Content={"center"}>
         <Grid item xs={12} sm={6}>
           <TextField
             required
             id="title"
             name="title"
-            label="title"
+            label="Title of the Book"
             fullWidth
-            autoComplete="given-name"
             variant="standard"
           />
         </Grid>
@@ -32,28 +41,17 @@ export default function AddressForm() {
             required
             id="author"
             name="author"
-            label="author"
+            label="Author"
             fullWidth
-            autoComplete="family-name"
             variant="standard"
           />
         </Grid>
-        <Grid item xs={12}>
-          <TextField
-            required
-            id="price"
-            name="price"
-            label="price"
-            fullWidth
-            autoComplete="shipping address-line1"
-            variant="standard"
-          />
-        </Grid>
+       
         <Grid item xs={12}>
           <TextField
             id="description"
             name="description"
-            label="description"
+            label="Short description"
             fullWidth
             autoComplete="shipping address-line2"
             variant="standard"
@@ -64,7 +62,7 @@ export default function AddressForm() {
             required
             id="pictureSrc"
             name="pictureSrc"
-            label="location"
+            label="Link to image of book"
             fullWidth
             autoComplete="shipping address-level2"
             variant="standard"
@@ -72,9 +70,10 @@ export default function AddressForm() {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
-            id="state"
-            name="state"
-            label="State/Province/Region"
+            required
+            id="location"
+            name="location"
+            label="City"
             fullWidth
             variant="standard"
           />
@@ -82,32 +81,23 @@ export default function AddressForm() {
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="zip"
-            name="zip"
-            label="Zip / Postal code"
+            id="price"
+            name="price"
+            label="Listing price"
             fullWidth
-            autoComplete="shipping postal-code"
             variant="standard"
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="country"
-            name="country"
-            label="Country"
-            fullWidth
-            autoComplete="shipping country"
-            variant="standard"
-          />
-        </Grid>
+        
+        
         <Grid item xs={12}>
-          <FormControlLabel
+
+           <FormControlLabel
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
             label="Use this address for payment details"
-          />
+          /> 
         </Grid>
       </Grid>
-    </React.Fragment>
+    </>
   );
 }
