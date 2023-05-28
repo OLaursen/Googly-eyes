@@ -71,23 +71,27 @@ const Hamburger = styled(Box)(({ theme }) => ({
 const NavBar = () => {
   //--------- (Avatar) Profilemenu functions: -----------//
   const [avatarMenu, setAvatarMenu] = React.useState(null);
-  const openAvatarMenu = Boolean(avatarMenu);
-  const handleClickProfileMenu = (event) => {
+  const [openAvatarMenu, setOpenAvatarMenu] = React.useState(false)
+  const handleClickAvatarMenu = (event) => {
     setAvatarMenu(event.currentTarget);
+    setOpenAvatarMenu(true);
   };
   const handleCloseAvatarMenu = () => {
     setAvatarMenu(null);
+    setOpenAvatarMenu(false);
   };
   //----------------------------------------------------//
 
   //--------- (Burger) Burgermenu Functionality: -----------//
   const [burgermenu, setBurgerMenu] = useState(null);
-  const openBurgerMenu = Boolean(burgermenu);
+  const [openBurgerMenu, setOpenBurgerMenu] = React.useState(false);
   const handleClickBurgerMenu = (event) => {
     setBurgerMenu(event.currentTarget);
+    setOpenBurgerMenu(true);
   };
   const handleCloseBurgerMenu = () => {
     setBurgerMenu(null);
+    setOpenBurgerMenu(false)
   };
   //----------------------------------------------------//
 
@@ -165,7 +169,7 @@ const NavBar = () => {
           </Link>
           <Avatar
             className="avatar"
-            onClick={handleClickProfileMenu}
+            onClick={handleClickAvatarMenu}
             src="https://www.socialdemokratiet.dk/media/ox2hyghg/mette.jpg?format=webp&width=500&height=500&mode=crop&quality=80&center=0.50125313283208017,0.4949874686716792"
           ></Avatar>
         </Icons>
@@ -180,6 +184,7 @@ const NavBar = () => {
         id="avatar-menu"
         open={openAvatarMenu}
         onClose={handleCloseAvatarMenu}
+        anchorEl={avatarMenu}
         anchorOrigin={{
           vertical: "top",
           horizontal: "right",
@@ -189,9 +194,9 @@ const NavBar = () => {
           horizontal: "right",
         }}
       >
-        <MenuItem onClick={handleCloseBurgerMenu}>Profile</MenuItem>
-        <MenuItem onClick={handleCloseBurgerMenu}>My Listings</MenuItem>
-        <MenuItem onClick={handleCloseBurgerMenu}>Logout</MenuItem>
+        <MenuItem onClick={handleCloseAvatarMenu}>Profile</MenuItem>
+        <MenuItem onClick={handleCloseAvatarMenu}>My Listings</MenuItem>
+        <MenuItem onClick={handleCloseAvatarMenu}>Logout</MenuItem>
       </Menu>
 
       {/* BurgerMenu */}
@@ -200,6 +205,7 @@ const NavBar = () => {
         aria-labelledby="Burger-menu"
         open={openBurgerMenu}
         onClose={handleCloseBurgerMenu}
+        anchorEl={burgermenu}
         anchorOrigin={{
           vertical: "top",
           horizontal: "right",
@@ -209,9 +215,9 @@ const NavBar = () => {
           horizontal: "right",
         }}
       >
-        <MenuItem onClick={handleCloseAvatarMenu} >Profile</MenuItem>
-        <MenuItem onClick={handleCloseAvatarMenu} >My Listings</MenuItem>
-        <MenuItem onClick={handleCloseAvatarMenu} LinkComponent={Link} href="/sign-in" >Logout</MenuItem>
+        <MenuItem onClick={handleCloseBurgerMenu} >Profile</MenuItem>
+        <MenuItem onClick={handleCloseBurgerMenu} >My Listings</MenuItem>
+        <MenuItem onClick={handleCloseBurgerMenu} >Logout</MenuItem>
       </Menu>
     </AppBar>
   );
