@@ -58,6 +58,11 @@ export const theme = createTheme({
     },
     shape: {
         borderRadius: "10px"
+    },
+    typography: {
+        fontFamily: [
+            
+        ]
     }
 
     })

@@ -15,8 +15,9 @@ const ContentCarousel = (CarouselInfo) => {
   const { category } = CarouselInfo;
   return (
     <>
+    <Divider role="presentation" flexItem></Divider>
     <Grid container direction="row" spacing={2} justifyContent={"center"}>
-      <Divider variant="middle" role="presentation" flexItem></Divider>
+      
       <Grid item xs={12}>
         <Typography label="carousel-header" variant="h6">
           {category}
