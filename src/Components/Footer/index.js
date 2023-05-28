@@ -4,7 +4,7 @@ import { Box, Grid, Typography } from "@mui/material";
 
 function Footer() {
   return (
-    <Box className="footer-container">
+    <Box className="footer-container" marginTop={"24px"}>
         <Grid
           container
           className="footer-link-wrapper"
