@@ -1,6 +1,6 @@
 import React from 'react'
 import { Divider, Grid, Typography } from '@mui/material';
-import data from "../../data/mockData";
+import data from "../../data/listingData";
 import MiniListing from './MiniListing';
 
 const ContentCarousel = (CarouselInfo) => {

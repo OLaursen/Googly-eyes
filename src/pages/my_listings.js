@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Divider, Typography } from '@mui/material'
+import { Container, Typography } from '@mui/material'
 import ContentCarousel from '../Components/ContentGrid/ContentCarousel'
 import NavBar from '../Components/NavBar/NavBar'
 
