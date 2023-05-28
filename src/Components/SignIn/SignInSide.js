@@ -31,7 +31,7 @@ function Copyright(props) {
     );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
+// https://github.com/mui/material-ui/tree/v5.13.2/docs/data/material/getting-started/templates/sign-in-side
 
 const defaultTheme = createTheme();
 
