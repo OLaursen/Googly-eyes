@@ -7,6 +7,7 @@ import NavBar from './Components/NavBar/NavBar';
 import MyListings from './pages/my_listings';
 import CreateListing from './pages/create_listing';
 import { Inbox } from '@mui/icons-material';
+import SignIn from './pages/sign_up';
 
 function App() {
   //Makes browser declare page.
@@ -22,6 +23,7 @@ function App() {
           <Route path='/create-listing' element={<CreateListing />} />
           <Route path='/my-listings' element={<MyListings/>} />
           <Route path='/inbox' element={<Inbox />} />
+          <Route path='/sign-in' element={<SignIn />} />
         </Routes>
         <Footer />
       </Router>

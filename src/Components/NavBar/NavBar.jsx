@@ -35,7 +35,7 @@ const Search = styled(Box)(({ theme }) => ({
   backgroundColor: "white",
   display: "flex",
   justifyContent: "center",
-  padding: "0 10px",
+  padding: "0 8px",
   borderRadius: theme.shape.borderRadius,
   width: "30%",
 }));
@@ -43,20 +43,20 @@ const Search = styled(Box)(({ theme }) => ({
 const Icons = styled(Box)(({ theme }) => ({
   display: "none",
   alignItems: "center",
-  gap: "20px",
+  gap: "16px",
   [theme.breakpoints.up("md")]: {
     display: "flex",
     justifyContent: "right",
   },
   [theme.breakpoints.down("lg")]: {
-    gap: "30px",
+    gap: "24px",
   },
 }));
 
 const IconItem = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
-  gap: "10px",
+  gap: "8px",
 }));
 
 const Hamburger = styled(Box)(({ theme }) => ({
@@ -95,7 +95,7 @@ const NavBar = () => {
     <AppBar position="sticky">
       <StyledToolbar>
         <Link id="home-logo" to={"/"}>
-          <Box display={"flex"} gap={"10px"}>
+          <Box display={"flex"} gap={"8px"}>
             <AutoStoriesTwoTone sx={{ fontSize: 30 }} />
             <Typography
               variant="h5"
@@ -209,9 +209,9 @@ const NavBar = () => {
           horizontal: "right",
         }}
       >
-        <MenuItem onClick={handleCloseAvatarMenu}>Profile</MenuItem>
-        <MenuItem onClick={handleCloseAvatarMenu}>My Listings</MenuItem>
-        <MenuItem onClick={handleCloseAvatarMenu}>Logout</MenuItem>
+        <MenuItem onClick={handleCloseAvatarMenu} >Profile</MenuItem>
+        <MenuItem onClick={handleCloseAvatarMenu} >My Listings</MenuItem>
+        <MenuItem onClick={handleCloseAvatarMenu} LinkComponent={Link} href="/sign-in" >Logout</MenuItem>
       </Menu>
     </AppBar>
   );

@@ -4,12 +4,7 @@ import ContentCarousel from "./ContentCarousel";
 import styled from "@emotion/styled";
 import ListingCard from "./ListingCard";
 
-
-
-
 export const Feed = () => {
-  
-    
     return(
     <Box flex={8} p={2}>
         
@@ -25,12 +20,8 @@ export const Feed = () => {
                 <Grid item>
                     <ContentCarousel category="" />
                 </Grid>
-                
-
             </Grid>
-    
-       
+
     </Box>
     )}
-
 export default Feed

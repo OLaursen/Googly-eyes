@@ -2,7 +2,7 @@ import React from 'react'
 import { Divider, Grid, Typography } from '@mui/material';
 import ListingCard from './ListingCard';
 import bookList from "../../data/mockData";
-import SingleListing from '../MiniListing.jsx';
+import SingleListing from '../MiniListing/index.js';
 
 
 

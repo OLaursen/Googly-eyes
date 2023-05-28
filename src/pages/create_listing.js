@@ -7,6 +7,8 @@ export default class CreateListing extends React.Component {
             <>
             <Link to={"/"}>
                     <h1>Return home bitch</h1>
+                    
+                    {/* Brug floating Action Button til "Plus"-knappen */}
             </Link>
                 
             </>
