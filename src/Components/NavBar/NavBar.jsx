@@ -34,7 +34,7 @@ const Search = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   padding: "0 8px",
   borderRadius: theme.shape.borderRadius,
-  width: "30%",
+  width: "33%",
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
@@ -111,7 +111,13 @@ const NavBar = () => {
           </Box>
         </Link>
 
-        <Search>
+        <Search
+          sx={{
+            [theme.breakpoints.down("md")]: {
+              display: "none",
+            },
+          }}
+        >
           <InputBase
             fullWidth="true"
             placeholder="Search for title, author, subject, or ISBN.."
@@ -203,7 +209,7 @@ const NavBar = () => {
           <MenuItem onClick={handleCloseAvatarMenu}>Logout</MenuItem>
         </Link>
       </Menu>
-      {/* ----------------------------------- */} 
+      {/* ----------------------------------- */}
 
       {/* ----------- BurgerMenu ------------ */}
       <Menu
