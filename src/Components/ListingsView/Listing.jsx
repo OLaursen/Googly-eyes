@@ -11,7 +11,7 @@ import { ListingImage } from "../../styles/ContentGrid";
 
 
 
-const ListingCard = (listingobj) =>{
+const Listing = (listingobj) =>{
     const theme = useTheme();
       
     const card = (
@@ -87,4 +87,4 @@ const ListingCard = (listingobj) =>{
     )
 }
 
-export default ListingCard
+export default Listing

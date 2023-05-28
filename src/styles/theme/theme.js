@@ -39,13 +39,6 @@ export const theme = createTheme({
 
             }
         },
-        MuiCard:{
-            styleOverrides:{
-                maxWidth:"300px",
-                maxHeight:"300px",
-                
-            }
-        }
         
     }
     })

@@ -14,7 +14,9 @@ function Footer() {
         >
           <Grid item sx={{xs:"12", md:"6", lg:"4" }}>
             <Typography variant="overline" class="footer-link-items">
-              Used books by Omm^TM All rights reserveed
+              Used books by Omm^TM 
+              <br />
+              All rights reserved.
             </Typography>
           </Grid>
           <Grid item>

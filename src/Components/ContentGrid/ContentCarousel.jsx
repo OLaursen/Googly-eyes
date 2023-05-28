@@ -1,8 +1,8 @@
 import React from 'react'
 import { Divider, Grid, Typography } from '@mui/material';
-import ListingCard from './ListingCard';
+import ListingCard from '../ListingsView/Listing';
 import bookList from "../../data/mockData";
-import SingleListing from '../MiniListing.jsx';
+import SingleListing from './MiniListing.jsx/index.js';
 
 
 
