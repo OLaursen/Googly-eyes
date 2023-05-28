@@ -28,7 +28,7 @@ const Home = () => {
                     border={2}
                     borderColor={'black'}
                     borderRadius={theme.shape.borderRadius}
-                    height={"40px"}
+                    height={"48px"}
                     alignItems={"center"}
                     sx={{
                         [theme.breakpoints.up("md")]: {
@@ -40,7 +40,7 @@ const Home = () => {
                         fullWidth="true"
                         placeholder="      Search for title, author, subject, or ISBN.."
                     />
-                    <SearchIcon color='black' sx={{marginRight: "16px"}}/>
+                    <SearchIcon fontSize='large' color='black' sx={{marginRight: "16px"}}/>
                 </Box>
                 <Box sx={{ background: "#fff" }} >
                     <Stack direction="row" spacing={2} justifyContent="space-between">
