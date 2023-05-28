@@ -1,14 +1,12 @@
 import React from 'react'
 import { Divider, Grid, Typography } from '@mui/material';
-import ListingCard from './ListingCard';
 import data from "../../data/mockData";
-import SingleListing from '../SingleListing/index.js';
+import MiniListing from './MiniListing';
 
 const ContentCarousel = (CarouselInfo) => {
-  const getListingCard = data.map((listingobj) => (
+  const getListings = data.map((listingobj) => (
     <Grid item key={listingobj.id} xs={12} sm={6} md={4} alignItems="center">
-      {/* <ListingCard {...listingobj} />  */}
-      <SingleListing {...listingobj} />
+      <MiniListing {...listingobj} />
     </Grid>
   ));
 
@@ -23,7 +21,7 @@ const ContentCarousel = (CarouselInfo) => {
         </Typography>
       </Grid>
 
-      {getListingCard}
+      {getListings}
     </Grid>
     </>
   );
