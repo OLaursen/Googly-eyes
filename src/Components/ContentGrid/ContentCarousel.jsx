@@ -1,11 +1,11 @@
-import React from "react";
-import { Divider, Grid, Typography } from "@mui/material";
-import ListingCard from "./ListingCard";
-import bookList from "../../data/mockData";
-import SingleListing from "../MiniListing/index.js";
+import React from 'react'
+import { Divider, Grid, Typography } from '@mui/material';
+import ListingCard from './ListingCard';
+import data from "../../data/mockData";
+import SingleListing from '../SingleListing/index.js';
 
 const ContentCarousel = (CarouselInfo) => {
-  const getListingCard = bookList.map((listingobj) => (
+  const getListingCard = data.map((listingobj) => (
     <Grid item key={listingobj.id} xs={12} sm={6} md={4} alignItems="center">
       {/* <ListingCard {...listingobj} />  */}
       <SingleListing {...listingobj} />
