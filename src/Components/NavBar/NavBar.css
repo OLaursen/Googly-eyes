@@ -1,0 +1,23 @@
+.link {
+    color: #fff;
+    text-decoration: none;
+}
+.link :hover {
+    animation-name: link;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes link {
+    from {color: #fff;}
+    to {color: rgb(203, 178, 121)}
+}
+.badge :hover {
+    pointer-events: none;
+}
+
+
+#home-logo {
+    color: #fff;
+    text-decoration: none;
+}

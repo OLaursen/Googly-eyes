@@ -1,35 +1,17 @@
-import { Box, Divider, Grid, Typography } from "@mui/material";
+import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import ContentCarousel from "./ContentCarousel";
 
+import styled from "@emotion/styled";
+import ListingCard from "./ListingCard";
 
 export const Feed = () => {
-  return (
-    <Box flex={8} p={2}>
-      <Grid
-        container
-        label="feed-grid"
-        direction="column"
-        justifyContent={"space-between"}
-      >
-        <Grid
-          item
-          xs={12}
-          display="flex"
-          justifyContent={"center"}
-          sx={{ backgroundColor: "" }}
-        >
-          <Typography variant="h4">
-            Discover or rediscover listings....
-          </Typography>
-          <Divider />
-        </Grid>
-
-        <Grid item>
-          <ContentCarousel category="" />
-        </Grid>
-      </Grid>
-    </Box>
-  );
-};
-
-export default Feed;
+    return(
+        <Container>
+                    <Typography variant="h4" padding={"16px 0px"}>
+                        Discover or rediscover listings....
+                    </Typography>
+                    <Divider />
+                    <ContentCarousel category="" />
+        </Container>
+    )}
+export default Feed
