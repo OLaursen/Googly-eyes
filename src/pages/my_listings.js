@@ -11,6 +11,7 @@ export default class MyListings extends React.Component {
                     My Listings
                 </Typography>
                 
+                
                 {/*
                 Alle listings skal have et seller ID. Hvis seller ID = user ID, så er den listing på "MyListing" page.
                 */}
