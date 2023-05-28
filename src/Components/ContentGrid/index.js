@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Grid, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import ContentCarousel from "./ContentCarousel";
 
 
