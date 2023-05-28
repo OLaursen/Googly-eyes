@@ -111,7 +111,13 @@ const NavBar = () => {
           </Box>
         </Link>
 
-        <Search>
+        <Search
+          sx={{
+            [theme.breakpoints.down("md")]: {
+              display: "none",
+            },
+          }}
+        >
           <InputBase
             fullWidth="true"
             placeholder="Search for title, author, subject, or ISBN.."
@@ -203,7 +209,7 @@ const NavBar = () => {
           <MenuItem onClick={handleCloseAvatarMenu}>Logout</MenuItem>
         </Link>
       </Menu>
-      {/* ----------------------------------- */} 
+      {/* ----------------------------------- */}
 
       {/* ----------- BurgerMenu ------------ */}
       <Menu

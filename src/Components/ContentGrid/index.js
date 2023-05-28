@@ -8,7 +8,7 @@ export const Feed = () => {
     return(
         <Container>
                     <Typography variant="h4" padding={"16px 0px"}>
-                        Discover or rediscover listings....
+                        Discover Books
                     </Typography>
                     <Divider />
                     <ContentCarousel category="" />
