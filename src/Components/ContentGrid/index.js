@@ -1,8 +1,6 @@
 import { Typography } from "@mui/material";
 import ContentCarousel from "./ContentCarousel";
 
-
-
 export const Feed = () => {
     return (
         <>
