@@ -1,21 +1,31 @@
 import styled from '@emotion/styled'
-import { Search } from '@mui/icons-material'
-import { Box } from '@mui/material'
+import { Search as SearchIcon } from '@mui/icons-material'
+import { Box, IconButton, TextField } from '@mui/material'
 import React from 'react'
 
 const SearchMobile = () => {
-  const Search = styled(Box)(({ theme }) => ({
-    backgroundColor: "white",
-    display: "flex",
-    justifyContent: "center",
-    padding: "0 8px",
-    borderRadius: theme.shape.borderRadius,
-    width: "30%",
-  }));
+  const SearchBar = ({ setSearchQuery }) => (
+    <form>
+      <TextField
+        id="search-bar"
+        className="text"
+        onInput={(e) => {
+          setSearchQuery(e.target.value);
+        }}
+        label="Enter a city name"
+        variant="outlined"
+        placeholder="Search..."
+        size="small"
+      />
+      <IconButton type="submit" aria-label="search">
+        <SearchIcon style={{ fill: "blue" }} />
+      </IconButton>
+    </form>
+  );
   
   return (
     <>
-      <Search></Search>
+      <SearchBar></SearchBar>
     </>
   )
 }
