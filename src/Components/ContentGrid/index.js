@@ -1,8 +1,7 @@
 import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import ContentCarousel from "./ContentCarousel";
 
-import styled from "@emotion/styled";
-import ListingCard from "./ListingCard";
+
 
 export const Feed = () => {
     return (
