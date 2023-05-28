@@ -7,6 +7,11 @@
     animation-duration: 300ms;
     animation-fill-mode: forwards;
 }
+.menu-link {
+    color: #000000;
+    text-decoration: none;
+    font: 1em sans-serif;
+}
 
 @keyframes link {
     from {color: #fff;}

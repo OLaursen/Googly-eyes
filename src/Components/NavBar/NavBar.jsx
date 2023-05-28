@@ -3,8 +3,6 @@ import "./NavBar.css";
 import {
   AutoStoriesTwoTone,
   Forum,
-  Notifications,
-  QuestionAnswerOutlined,
   Sell,
 } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -15,7 +13,6 @@ import {
   Badge,
   Box,
   Button,
-  IconButton,
   InputBase,
   Menu,
   MenuItem,
@@ -71,7 +68,7 @@ const Hamburger = styled(Box)(({ theme }) => ({
 const NavBar = () => {
   //--------- (Avatar) Profilemenu functions: -----------//
   const [avatarMenu, setAvatarMenu] = React.useState(null);
-  const [openAvatarMenu, setOpenAvatarMenu] = React.useState(false)
+  const [openAvatarMenu, setOpenAvatarMenu] = React.useState(false);
   const handleClickAvatarMenu = (event) => {
     setAvatarMenu(event.currentTarget);
     setOpenAvatarMenu(true);
@@ -91,7 +88,7 @@ const NavBar = () => {
   };
   const handleCloseBurgerMenu = () => {
     setBurgerMenu(null);
-    setOpenBurgerMenu(false)
+    setOpenBurgerMenu(false);
   };
   //----------------------------------------------------//
 
@@ -179,7 +176,7 @@ const NavBar = () => {
         </Hamburger>
       </StyledToolbar>
 
-      {/* Profile/Avatar Menu */}
+      {/* ----------- Avatar Menu ----------- */}
       <Menu
         id="avatar-menu"
         open={openAvatarMenu}
@@ -194,12 +191,21 @@ const NavBar = () => {
           horizontal: "right",
         }}
       >
-        <MenuItem onClick={handleCloseAvatarMenu}>Profile</MenuItem>
-        <MenuItem onClick={handleCloseAvatarMenu}>My Listings</MenuItem>
-        <MenuItem onClick={handleCloseAvatarMenu}>Logout</MenuItem>
+        <Link className="menu-link" to={"/"}>
+          <MenuItem className="menu-link" onClick={handleCloseAvatarMenu}>
+            Profile
+          </MenuItem>
+        </Link>
+        <Link className="menu-link" to={"/my-listings"}>
+          <MenuItem onClick={handleCloseAvatarMenu}>My Listings</MenuItem>
+        </Link>
+        <Link className="menu-link" to={"/sign-in"}>
+          <MenuItem onClick={handleCloseAvatarMenu}>Logout</MenuItem>
+        </Link>
       </Menu>
+      {/* ----------------------------------- */} 
 
-      {/* BurgerMenu */}
+      {/* ----------- BurgerMenu ------------ */}
       <Menu
         id="Burger-Menu"
         aria-labelledby="Burger-menu"
@@ -215,10 +221,22 @@ const NavBar = () => {
           horizontal: "right",
         }}
       >
-        <MenuItem onClick={handleCloseBurgerMenu} >Profile</MenuItem>
-        <MenuItem onClick={handleCloseBurgerMenu} >My Listings</MenuItem>
-        <MenuItem onClick={handleCloseBurgerMenu} >Logout</MenuItem>
+        <Link className="menu-link" to={"/"}>
+          <MenuItem className="menu-link" onClick={handleCloseBurgerMenu}>
+            Home
+          </MenuItem>
+        </Link>
+        <Link className="menu-link" to={"/my-listings"}>
+          <MenuItem onClick={handleCloseBurgerMenu}>My Listings</MenuItem>
+        </Link>
+        <Link className="menu-link" to={"/inbox"}>
+          <MenuItem onClick={handleCloseBurgerMenu}>Inbox</MenuItem>
+        </Link>
+        <Link className="menu-link" to={"/sign-in"}>
+          <MenuItem onClick={handleCloseBurgerMenu}>Logout</MenuItem>
+        </Link>
       </Menu>
+      {/* ------------------------------------ */}
     </AppBar>
   );
 };
