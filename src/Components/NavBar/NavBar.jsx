@@ -6,6 +6,7 @@ import {
   Sell,
 } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Search as SearchIcon } from "@mui/icons-material";
 
 import {
   AppBar,
@@ -34,7 +35,7 @@ const Search = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   padding: "0 8px",
   borderRadius: theme.shape.borderRadius,
-  width: "30%",
+  width: "33%",
 }));
 
 const Icons = styled(Box)(({ theme }) => ({

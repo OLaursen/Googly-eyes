@@ -4,6 +4,7 @@ import Feed from '../Components/ContentGrid';
 import NavBar from '../Components/NavBar/NavBar';
 import styled from '@emotion/styled';
 import { theme } from '../styles/theme/theme';
+import { Search as SearchIcon } from '@mui/icons-material';
 
 const Search = styled(Box)(({ theme }) => ({
     display: "flex",
@@ -28,6 +29,7 @@ const Home = () => {
                     borderColor={'black'}
                     borderRadius={theme.shape.borderRadius}
                     height={"40px"}
+                    alignItems={"center"}
                     sx={{
                         [theme.breakpoints.up("md")]: {
                             display: "none",
@@ -36,8 +38,9 @@ const Home = () => {
                     }}>
                     <InputBase
                         fullWidth="true"
-                        placeholder="Search for title, author, subject, or ISBN.."
+                        placeholder="      Search for title, author, subject, or ISBN.."
                     />
+                    <SearchIcon color='black' sx={{marginRight: "16px"}}/>
                 </Box>
                 <Box sx={{ background: "#fff" }} >
                     <Stack direction="row" spacing={2} justifyContent="space-between">
