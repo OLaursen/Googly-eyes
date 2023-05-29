@@ -49,7 +49,7 @@ import FormLabel from '@mui/material/FormLabel';
   }
   function ConditionButtonsGroup() {
     return (
-      <FormControl>
+      <FormControl required>
         <FormLabel id="condition-buttons-group-label" onChange={setCondition} value={condition} required>Condition</FormLabel>
         <RadioGroup
           row
@@ -71,7 +71,7 @@ import FormLabel from '@mui/material/FormLabel';
         <Box sx={{ height: '100vh' }}>
 
           <Typography variant="h4" gutterBottom justifyContent={"center"} display={"flex"}>
-            Create Listing
+            New Listing
           </Typography>
           <Grid container spacing={3} justify-Content={"center"}>
 

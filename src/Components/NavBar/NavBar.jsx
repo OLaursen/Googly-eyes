@@ -235,6 +235,9 @@ const NavBar = () => {
         <Link className="menu-link" to={"/my-listings"}>
           <MenuItem onClick={handleCloseBurgerMenu}>My Listings</MenuItem>
         </Link>
+        <Link className="menu-link" to={"/create-listing"}>
+          <MenuItem onClick={handleCloseBurgerMenu}>Add Listing</MenuItem>
+        </Link>
         <Link className="menu-link" to={"/inbox"}>
           <MenuItem onClick={handleCloseBurgerMenu}>Inbox</MenuItem>
         </Link>

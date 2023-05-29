@@ -1,12 +1,14 @@
 import { Image } from "@mui/icons-material";
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import { Box, Button, Card, CardActions, CardContent, CardMedia, Grid, Popover, Typography } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/material/styles";
 import { Stack } from "@mui/system";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SingleListing = (listingobj) => {
     const theme = useTheme();
-    
+
+   
     const card = (
         
         <React.Fragment>
@@ -41,9 +43,11 @@ const SingleListing = (listingobj) => {
                         
              <CardActions>
                 <Grid container direction="row" justifyContent={"space-between"}>
+                <Link className="menu-link" to={"/expanded-view"}>
                 <Button size="small" variant="outlined" color="secondary">
                     Expand
-                    </Button>
+                </Button>
+                </Link>
                 <Button size="small" variant="outlined" color="secondary">
                     Contact Seller
                     </Button>    
