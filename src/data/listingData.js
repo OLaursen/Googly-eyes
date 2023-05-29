@@ -1,15 +1,4 @@
 export default[
-    {
-        title: "Algorithms, fourth edition",
-        author: "Robert Sedgewick and Kevin Wayne",
-        price: "450",
-        description: "Books on algorithms, used for one semester",
-        condition: "Poor",
-        pictureSrc: "https://sedgewick.io/wp-content/uploads/2020/07/Algorithms-Robert-Sedgewick-Kevin-Wayne.jpg",
-        sellerID: 1,
-        ID: 1,
-        location: "Amager"
-    },
 
     {
         title: "IT-Projekt Arbejde",
