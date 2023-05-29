@@ -153,7 +153,7 @@ const NavBar = () => {
               </Typography>
             </IconItem>
           </Link>
-          <Link className="link" to={"/inbox"}>
+          <Link className="link" to={"/inbox/selling"}>
             <IconItem>
               <Badge className="badge" color="error" badgeContent="5">
                 <Forum color="accent" />
