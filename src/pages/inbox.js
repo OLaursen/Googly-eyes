@@ -5,6 +5,7 @@ import { Box, Container, Divider, Tab, Tabs, Typography } from '@mui/material'
 import { Sell, ShoppingCart } from '@mui/icons-material'
 import ContentCarousel from '../Components/ContentGrid/ContentCarousel'
 import { theme } from '../styles/theme/theme'
+import InboxCard from '../Components/InboxCard/InboxCard'
 
 const InboxPage = () => {
 
@@ -26,7 +27,7 @@ const InboxPage = () => {
                         <Tab icon={<ShoppingCart />} label="Buying" />
                     </Tabs>
                 </Box>
-                <ContentCarousel />
+                <InboxCard></InboxCard>
             </Container>
         </>
     )
