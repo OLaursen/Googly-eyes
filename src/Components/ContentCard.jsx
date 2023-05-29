@@ -1,60 +1,106 @@
 import * as React from 'react';
-import {Card, CardHeader, CardMedia, CardContent, CardActions, Avatar, IconButton, Typography, styled, Box, Checkbox, StepLabel, Container } from '@mui/material';
-import { FavoriteBorder, MoreVert} from '@mui/icons-material';
+import {Card, CardHeader, CardMedia, CardContent, CardActions, Avatar, IconButton, Typography, styled, Box, Checkbox, StepLabel, Container, Grid, Divider } from '@mui/material';
+import { FavoriteBorder, Image, MoreVert} from '@mui/icons-material';
 import ShareIcon from '@mui/icons-material/Share';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import SmsIcon from '@mui/icons-material/Sms';
 
 
 
-export function ContentCard(listingobj){
-    const {title, condition, src, price, description } = listingobj
+const ContentCard = (listingobj) => {
+
+    const StyledContainer = styled(Container)(({ theme }) => (
+        {
+        width: '50vw',
+        minWidth: '500',
+        height: '50vh',
+        minHeight: '550',
+        direction: "row",
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      
+        [theme.breakpoints.down("md")]: {
+            flexdirection: "row",
+            width: 500,
+            height: 550,
+        },
+      
+    }));
+    
+  
+    
+
+
     return(
-        <Container>
-
+        <>
+    
+        
         <Card>
-            <CardHeader
-                    title= {title}
-                    subheader={condition}
-                    />
+        
+            <StyledContainer flexDirection="column">
+            
+
+            <Grid container direction="row" spacing={2} justifyContent={"center"}>
+                <Grid item xs={6} lg={4} sx={{}}>
+
                 <CardMedia
-                    component="img"
-                    height = "200"
-                    alt="sales-picture"
-                    src={src}                   
-                     />
-            <CardContent>
-
-                <box id="pricetag">
-                    <Typography variant='h6' color="text.secondary">
-                        {price} DKK
-                    </Typography>
-                </box>
+                            sx={{backgroundColor:"inherit", objectFit:"contain", paddingTop:2, paddingBottom:2}}
+                            height="100%"
+                            component={"img"}
+                            src={listingobj.pictureSrc} 
+                            />  
                 
-                <Typography variant="body2" color="text.secondary">
-                    {description}
-                </Typography>
+             </Grid>
+             <Grid item xs={6} lg={8}>
 
-            </CardContent>
+                <CardContent>
+                    <Container justifyContent="space-between" height="100%">
+                        <Typography variant='h4' color={'primary'}>
+                            {listingobj.title}
+                        </Typography>
+                        <Divider presentation/>
+                        <Typography variant='h6' color={'textSecondary'}>
+                            Condition: {listingobj.condition}
+                        </Typography>
+                        <Typography>
+                            Remarks: {listingobj.description}
+                        </Typography>
 
-            <CardActions disableSpacing>
+                        <Container direction="row" justifyContent="space-between">
 
-                <IconButton aria-label="add to favorites">
-                    <Checkbox {...StepLabel} icon={<FavoriteBorder />} checkedIcon={<FavoriteIcon color='error'/>} /> 
-                </IconButton>
+                        <Typography variant='h4' color={'primary'}>
+                             {listingobj.price}DKK
+                        </Typography>
+                        <Typography>
+                            {listingobj.location}
+                        </Typography>
+                        </Container>
 
-                <IconButton aria-label="Message buyer">
+                    </Container>
+                  
+                    
+                   
+                
+                    <IconButton aria-label="Message buyer">
                     <SmsIcon />
+
                 </IconButton>
 
-                <IconButton aria-label="share">
-                    <ShareIcon />
-                </IconButton>
 
-            </CardActions>
+                </CardContent>
+
+             </Grid>
+
+
+            </Grid >
+       
+            </StyledContainer>
+        
 
         </Card>
-    </Container>
+    
+    </>
     )
 }
-
+export default ContentCard

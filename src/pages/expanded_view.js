@@ -1,18 +1,18 @@
-import React from 'react'
-import NavBar from '../Components/NavBar/NavBar'
-import { Container } from '@mui/material'
-import ListingForm from '../Components/CreateListing/ListingForm'
-import ContentCard from '../Components/ContentCard'
+import React from "react";
+import NavBar from "../Components/NavBar/NavBar";
 
-export default class expanded_view extends React.Component {
-    render() {
-        return (
-            <>
-            <NavBar />
-            <Container>
-                <ContentCard />
-            </Container>
-            </>
-        ) 
-    }
+import ContentCard from "../Components/ContentCard";
+
+const Expanded_view = (listingobj) => {
+
+    return (
+      <>
+        
+        <NavBar />
+        <ContentCard {...listingobj} />
+       
+      </>
+    );
 }
+
+export default Expanded_view

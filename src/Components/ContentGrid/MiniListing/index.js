@@ -1,23 +1,54 @@
-import { Image } from "@mui/icons-material";
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Grid, Popover, Typography } from "@mui/material";
-import { makeStyles, useTheme } from "@mui/material/styles";
-import { Stack } from "@mui/system";
+
+import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Modal, Typography, styled } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import React from "react";
 import { Link } from "react-router-dom";
+import ContentCard from "../../ContentCard";
+
 
 const SingleListing = (listingobj) => {
+    //Resources:
+    //https://github.com/safak/youtube/blob/material-ui/src/components/Add.jsx
+    //
+
     const theme = useTheme();
 
-   
+    // ---------Expand functionality---------- //
+    const [expand, setExpand] = React.useState(false);
+    const expandOpen = () => setExpand(true);
+    const expandClose = () => setExpand(false);
+
+    // ---------Contact Seller functionality---------- //
+    const [contact, setContact] = React.useState(false);
+    const openContact = () => setContact(true);
+    const closeContact = () => setContact(false);
+
+    const CustomModal = styled(Modal)(({ theme }) => (
+        {
+        width: '50vw',
+        height: '50vh',
+        backgroundColor: "white",
+        position: "absolute",
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        margin: "auto",
+        [theme.breakpoints.down("md")]: {
+            width: 500,
+            height: 550,
+        }
+      
+    }));
+
     const card = (
+    
         
         <React.Fragment>
             <Card >
 
                 <Grid container display={"flex"} direction={'row'} spacing={0} >
                     <Grid item xs={12} > 
-
-                        {/* <Image src={listingobj.pictureSrc} object-fit="cover" sx={{}} /> */}
                         <CardMedia 
                         sx={{backgroundColor:"inherit", objectFit:"contain",paddingTop:2, paddingBottom:2}}
                         height="200"
@@ -43,18 +74,30 @@ const SingleListing = (listingobj) => {
                         
              <CardActions>
                 <Grid container direction="row" justifyContent={"space-between"}>
-                <Link className="menu-link" to={"/expanded-view"}>
-                <Button size="small" variant="outlined" color="secondary">
+                {/* <Link className="menu-link" to={"/expanded-view"}> */}
+                <Button size="small" variant="outlined" color="secondary" onClick={expandOpen} >
                     Expand
                 </Button>
-                </Link>
-                <Button size="small" variant="outlined" color="secondary">
+                <CustomModal open={expand} onClose={expandClose} >
+                    
+                    <ContentCard {...listingobj} />
+                   
+                </CustomModal>
+                {/* </Link> */}
+                
+                <Button size="small" variant="outlined" color="secondary" onClick={openContact}>
                     Contact Seller
-                    </Button>    
+                </Button>    
+
                 </Grid>
+                <CustomModal open={contact} onClose={closeContact} >
+                    <Typography>This is where you should be able to contact the seller</Typography>
+                    
+                </CustomModal>
             </CardActions> 
             
             </Card>
+            
         </React.Fragment>
         
     );

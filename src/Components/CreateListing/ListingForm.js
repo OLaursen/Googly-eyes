@@ -36,8 +36,9 @@ import FormLabel from '@mui/material/FormLabel';
    
 //Når listing skal "oprettes"
   function handleSubmit(input){
-    //Taken from: 
+    //Inspiration sources: 
     //react.dev/reference/react-dom/components/input#reading-the-input-values-when-submitting-a-form
+    //https://www.copycat.dev/blog/material-ui-form/
 
       input.preventDefault();
       const form = input.target;
@@ -103,7 +104,6 @@ import FormLabel from '@mui/material/FormLabel';
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
-                required
                 id="ISBN"
                 name="ISBN"
                 label="ISBN-number"
@@ -158,7 +158,7 @@ import FormLabel from '@mui/material/FormLabel';
               <TextField
                 id="description"
                 name="description"
-                label="Remarks"
+                label="Remarks (I.E. page 142 is partially torn)"
                 type='text'
                 onChange={event => setDescription(event.target.value)}
                 value={description}
