@@ -27,7 +27,7 @@ const InboxCard = () => {
         }}
       >
         <CardActionArea>
-          <CardContent sx={{ display: "flex", alignItems: "center", justifyContent:"space-between"}}>
+          <CardContent sx={{ display: "flex", alignItems: "center", justifyContent:"space-between",}}>
             <Box
               display={"flex"}
               justifyContent={"center"}

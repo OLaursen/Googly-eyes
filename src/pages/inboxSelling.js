@@ -19,7 +19,7 @@ const InboxPageSelling = () => {
         <>
             <NavBar />
             <Container>
-                <Box display="flex" justifyContent="center" flexDirection={"column"} >
+                <Box display="flex" justifyContent="center" flexDirection={"column"}  >
 
                     <Typography variant="h4" padding={"16px 0px"}>
                         Inbox
@@ -31,7 +31,7 @@ const InboxPageSelling = () => {
                             <Tab icon={<ShoppingCart />} label="Buying" />
                         </Tabs>
                     </Box>
-                    <Box display={"flex"} flexDirection={"column"} justifyContent={"space-evenly"}>
+                    <Box display={"flex"} flexDirection={"column"} minHeight={"100vh"} >
                         <InboxCard />
                         <InboxCard />
                         <InboxCard />

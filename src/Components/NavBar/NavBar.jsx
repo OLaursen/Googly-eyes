@@ -35,6 +35,7 @@ const Search = styled(Box)(({ theme }) => ({
   padding: "0 8px",
   borderRadius: theme.shape.borderRadius,
   width: "33%",
+  height: "40px"
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
