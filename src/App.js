@@ -8,6 +8,7 @@ import CreateListing from './pages/create_listing';
 import SignIn from './pages/sign_up';
 import InboxPage from './pages/inbox';
 import SignUp from './Components/SignUp/SignUp';
+import Expanded_view from './pages/expanded_view';
 import {getUsers, createUser} from './data/userHandling';
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
           <Route path='/inbox' element={<InboxPage/>} />
           <Route path='/sign-in' element={<SignIn />} />
           <Route path='/sign-up' element={<SignUp />} />
+          <Route path='/expanded-view' element={<Expanded_view/>} />
+          
         </Routes>
         <Footer/>
       </Router>

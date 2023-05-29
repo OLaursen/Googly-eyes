@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import NavBar from '../Components/NavBar/NavBar'
-import  listingForm from '../Components/CreateListing/ListingForm'
 import { Container } from '@mui/material'
 import ListingForm from '../Components/CreateListing/ListingForm'
 
