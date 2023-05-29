@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
 import ContentCarousel from "./ContentCarousel";
 
 export const Feed = () => {
@@ -7,6 +7,7 @@ export const Feed = () => {
             <Typography variant="h4" padding={"16px 0px"}>
                 Discover Books
             </Typography>
+            <Divider role="presentation" />
             <ContentCarousel category="" />
         </>
     )
