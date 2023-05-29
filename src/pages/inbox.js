@@ -16,7 +16,7 @@ const InboxPage = () => {
     return (
         <>
             <NavBar />
-            <Container>
+            <Container minHeight="100vh">
                 <Typography variant="h4" padding={"16px 0px"}>
                     Inbox
                 </Typography>
