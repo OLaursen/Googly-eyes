@@ -10,11 +10,6 @@ export default class CreateListing extends React.Component {
             <>
                 <NavBar />
             <Container>
-                <Link to={"/"}>
-                    <h6>Back to Home</h6>
-
-                    {/* Brug Floating Action Button til "Plus"-knappen */}
-                </Link>
                 < ListingForm />
             </ Container>
             </>

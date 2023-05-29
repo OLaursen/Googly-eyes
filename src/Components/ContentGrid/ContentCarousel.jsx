@@ -5,7 +5,7 @@ import MiniListing from './MiniListing';
 
 const ContentCarousel = (CarouselInfo) => {
   const getListings = data.map((listingobj) => (
-    <Grid item key={listingobj.id} xs={12} sm={6} md={4} alignItems="center">
+    <Grid item key={listingobj.ID} xs={12} sm={6} md={4} alignItems="center">
       <MiniListing {...listingobj} />
     </Grid>
   ));
@@ -13,7 +13,7 @@ const ContentCarousel = (CarouselInfo) => {
   const { category } = CarouselInfo;
   return (
     <>
-    <Divider role="presentation" flexItem></Divider>
+    
     <Grid container direction="row" spacing={2} justifyContent={"center"}>
       
       <Grid item xs={12}>
