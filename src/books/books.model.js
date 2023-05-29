@@ -1,6 +1,6 @@
 import * as fs from "fs/promises";
 import { createRandomID } from "../utility.js";
-const BOOK_FILE = "./books/books.json";
+const BOOK_FILE = "./books.json";
 
 // return all books from file
 export async function getAll() {
