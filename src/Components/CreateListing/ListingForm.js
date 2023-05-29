@@ -9,6 +9,7 @@ import { Button, Container } from '@mui/material';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormLabel from '@mui/material/FormLabel';
+import {createRandomID} from './Util';
 
 
 //Heavily inspired by MUI Template found at:
@@ -31,23 +32,43 @@ import FormLabel from '@mui/material/FormLabel';
     const[price, setPrice] = React.useState('');
     const[condition, setCondition] = React.useState('');
     const[description, setDescription] = React.useState('');
+    const[status, setStatus]= React.useState('');
 
+    async function handleSubmit(event) {
+      //Tak Bjørn <3
+      //https://github.com/bwesth/demo/blob/main/src/Components/BookUpload.js
+      event.preventDefault();
+      let listing = {
+        title: title,
+        ISBN: ISBN,
+        location: location,
+        author: author,
+        price: price,
+        pictureSrc: pictureSrc,
+        condition: condition,
+        description: description,
+        ownerId: createRandomID("user"),
+      };
+      const response = await fetch("http://localhost:3000/create-listing", {
+        method: "POST",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        redirect: "follow",
+        referrerPolicy: "no-referrer",
+        body: JSON.stringify(listing),
+      });
+      if (response) {
+        const { statusText } = response;
+        setStatus(statusText);
+      }
+    }
 
    
-//Når listing skal "oprettes"
-  function handleSubmit(input){
-    //Inspiration sources: 
-    //react.dev/reference/react-dom/components/input#reading-the-input-values-when-submitting-a-form
-    //https://www.copycat.dev/blog/material-ui-form/
 
-      input.preventDefault();
-      const form = input.target;
-      const formData = new FormData(form);
-      fetch('/some-api', {method: form.method, body: formData});
-
-      const formJson = Object.fromEntries(formData.entries());
-      console.log(formJson);
-  }
   function ConditionButtonsGroup() {
     return (
       <FormControl required>
@@ -158,7 +179,7 @@ import FormLabel from '@mui/material/FormLabel';
               <TextField
                 id="description"
                 name="description"
-                label="Remarks (I.E. page 142 is partially torn)"
+                label="Remarks (E.G. page 142 is partially torn)"
                 type='text'
                 onChange={event => setDescription(event.target.value)}
                 value={description}
@@ -175,6 +196,7 @@ import FormLabel from '@mui/material/FormLabel';
         </Box>
       </Container>
     </form>
+    {status && <h4>{status}</h4>}
     </>
   );
 }
