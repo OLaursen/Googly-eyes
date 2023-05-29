@@ -1,25 +1,17 @@
-import {addListing} from "./userHandling"
+import { addListing } from "./userHandling"
 
 let listings = [
     {
-        title,
-        author,
-        price,
-        description,
-        condition,
-        pictureSrc,
-        sellerID,
-        ID,
-        location
+        
     }
-]
+];
 
 export function getListings() {
     return listings;
 }
 
 export function createListing(title, author, price, description, condition, pictureSrc, sellerID, location) {
-   const listing = {
+    const listing = {
         title: title,
         author: author,
         price: price,
