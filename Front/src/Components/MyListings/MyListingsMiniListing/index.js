@@ -113,6 +113,7 @@ const MyListingsSingleListing = (listingobj) => {
         </CardActions>
       </Card>
     </React.Fragment>
+    
   );
 
   return <Card>{myListingsCard}</Card>;

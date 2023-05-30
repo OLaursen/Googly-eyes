@@ -1,5 +1,5 @@
 import { Divider, Typography } from "@mui/material";
-import Carousel from "./MyListingsCarousel.jsx";
+import ContentCarousel from "./MyListingsCarousel.jsx";
 
 import React, { useEffect, useState } from "react";
 //ChatGPT Helped build this component
@@ -17,16 +17,13 @@ const FetchListings = () => {
   }, []);
 
   return listings.length > 0 ? (
-    <Carousel myListings={listings} />
+    <ContentCarousel listings={listings} />
   ) : null;
 };
 
 export const Feed = () => {
   return (
     <>
-      <Typography variant="h4" padding={"16px 0px"}>
-        Discover Books
-      </Typography>
       <Divider role="presentation" />
       <FetchListings />
     </>

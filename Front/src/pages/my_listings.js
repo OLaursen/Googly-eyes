@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Container, Divider, Tab, Tabs, Typography } from "@mui/material";
 import NavBar from "../Components/NavBar/NavBar";
 import MyListingsCarousel from "../Components/MyListings/MyListingsCarousel";
+import {Feed} from "../Components/MyListings";
 
 const MyListing = () => {
   const [value, setValue] = useState(0);
@@ -19,7 +20,7 @@ const MyListing = () => {
           </Typography>
           <Divider role="presentation" />
 
-          <MyListingsCarousel />
+          <Feed />
           {/*
                 Alle listings skal have et seller ID. Hvis seller ID = user ID, så er den listing på "MyListing" page.
             */}
