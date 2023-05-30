@@ -40,11 +40,10 @@ import {createRandomID} from './Util';
       event.preventDefault();
       let listing = {
         title: title,
-        ISBN: ISBN,
-        location: location,
-        author: author,
+        isbn: ISBN,
+        authors: [author],
         price: price,
-        pictureSrc: pictureSrc,
+        imagePath: pictureSrc,
         condition: condition,
         description: description,
         ownerId: createRandomID("user"),

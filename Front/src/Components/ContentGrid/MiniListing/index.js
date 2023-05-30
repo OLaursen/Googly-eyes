@@ -1,8 +1,8 @@
 
-import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Modal, Typography, styled } from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardMedia, Grid, Modal, Typography, styled } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
-import { Link } from "react-router-dom";
+
 import ContentCard from "../../ContentCard";
 
 
