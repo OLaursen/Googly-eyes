@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
-import { Button, Container } from '@mui/material';
+import { Button, Container, Divider } from '@mui/material';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormLabel from '@mui/material/FormLabel';
@@ -91,9 +91,10 @@ import {createRandomID} from './Util';
 
         <Box sx={{ height: '100vh' }}>
 
-          <Typography variant="h4" gutterBottom justifyContent={"center"} display={"flex"}>
+          <Typography variant="h4" gutterBottom display={"flex"} justifyContent={"center"} marginTop={"24px"}>
             New Listing
           </Typography>
+          
           <Grid container spacing={3} justify-Content={"center"}>
 
             <Grid item xs={12} sm={6}>

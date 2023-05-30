@@ -19,6 +19,7 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+
 import React, { useState } from "react";
 import { theme } from "../../styles/theme/theme";
 import { Link } from "react-router-dom";
@@ -35,6 +36,7 @@ const Search = styled(Box)(({ theme }) => ({
   padding: "0 8px",
   borderRadius: theme.shape.borderRadius,
   width: "33%",
+  height: "40px"
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
@@ -153,7 +155,7 @@ const NavBar = () => {
               </Typography>
             </IconItem>
           </Link>
-          <Link className="link" to={"/inbox"}>
+          <Link className="link" to={"/inbox/selling"}>
             <IconItem>
               <Badge className="badge" color="error" badgeContent="5">
                 <Forum color="accent" />
