@@ -53,7 +53,7 @@ const SingleListing = (listingobj) => {
                         sx={{backgroundColor:"inherit", objectFit:"contain",paddingTop:2, paddingBottom:2}}
                         height="200"
                         component={"img"}
-                        src={listingobj.pictureSrc} 
+                        src={listingobj.imagePath} 
                         /> 
                     </Grid>
 

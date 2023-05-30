@@ -48,7 +48,7 @@ const ContentCard = (listingobj) => {
                             sx={{backgroundColor:"inherit", objectFit:"contain", paddingTop:2, paddingBottom:2}}
                             height="100%"
                             component={"img"}
-                            src={listingobj.pictureSrc} 
+                            src={listingobj.imagePath} 
                             />  
                 
              </Grid>
@@ -63,18 +63,13 @@ const ContentCard = (listingobj) => {
                         <Typography variant='h6' color={'textSecondary'}>
                             Condition: {listingobj.condition}
                         </Typography>
-                        <Typography>
-                            Remarks: {listingobj.description}
-                        </Typography>
-
+                     
                         <Container direction="row" justifyContent="space-between">
 
                         <Typography variant='h4' color={'primary'}>
                              {listingobj.price}DKK
                         </Typography>
-                        <Typography>
-                            {listingobj.location}
-                        </Typography>
+                       
                         </Container>
 
                     </Container>
