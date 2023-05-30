@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
 import data from "../../data/myListingsData";
-import MiniListing from "../ContentGrid/MiniListing";
+import MiniListing from "../../../Front/src/Components/ContentGrid/MiniListing";
 import MyListingsSingleListing from "./MyListingsMiniListing";
 
 const MyListingsCarousel = (CarouselInfo) => {

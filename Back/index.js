@@ -41,14 +41,6 @@ app.get('/book', async (request, response) => {
   console.log(booksData);
 })
 
-app.get('/book/:id', async (request, response) => {
-
-  const id = request.params.id;
-
-  const bookData = await books.getByID(id);
-  response.send(JSON.stringify(bookData));
-  console.log(bookData);
-})
 
 app.post('/book', async (request, response) => {
   books.add(request.body);
