@@ -1,11 +1,13 @@
 import * as React from 'react';
-import {Card, CardMedia, CardContent, IconButton, Typography, styled, Container, Grid, Divider } from '@mui/material';
-
+import {Card, CardHeader, CardMedia, CardContent, CardActions, Avatar, IconButton, Typography, styled, Box, Checkbox, StepLabel, Container, Grid, Divider } from '@mui/material';
+import { FavoriteBorder, Image, MoreVert} from '@mui/icons-material';
+import ShareIcon from '@mui/icons-material/Share';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import SmsIcon from '@mui/icons-material/Sms';
 
 
 
-const ContentCard = (title, price,description,condition, imagePath, authors, ) => {
+const ContentCard = (listingobj) => {
 
     const StyledContainer = styled(Container)(({ theme }) => (
         {
@@ -46,7 +48,7 @@ const ContentCard = (title, price,description,condition, imagePath, authors, ) =
                             sx={{backgroundColor:"inherit", objectFit:"contain", paddingTop:2, paddingBottom:2}}
                             height="100%"
                             component={"img"}
-                            src={imagePath} 
+                            src={listingobj.pictureSrc} 
                             />  
                 
              </Grid>
@@ -55,23 +57,23 @@ const ContentCard = (title, price,description,condition, imagePath, authors, ) =
                 <CardContent>
                     <Container justifyContent="space-between" height="100%">
                         <Typography variant='h4' color={'primary'}>
-                            {title}
+                            {listingobj.title}
                         </Typography>
                         <Divider presentation/>
                         <Typography variant='h6' color={'textSecondary'}>
-                            Condition: {condition}
+                            Condition: {listingobj.condition}
                         </Typography>
                         <Typography>
-                            Remarks: {description}
+                            Remarks: {listingobj.description}
                         </Typography>
 
                         <Container direction="row" justifyContent="space-between">
 
                         <Typography variant='h4' color={'primary'}>
-                             {price}DKK
+                             {listingobj.price}DKK
                         </Typography>
                         <Typography>
-                            {authors}
+                            {listingobj.location}
                         </Typography>
                         </Container>
 

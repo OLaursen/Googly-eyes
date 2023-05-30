@@ -9,7 +9,7 @@ import { Button, Container } from '@mui/material';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormLabel from '@mui/material/FormLabel';
-
+import {createRandomID} from './Util';
 
 
 //Heavily inspired by MUI Template found at:
@@ -28,6 +28,7 @@ import FormLabel from '@mui/material/FormLabel';
     const[author, setAuthor] = React.useState('');
     const[ISBN, setISBN] = React.useState('');
     const[pictureSrc, setPictureSrc] = React.useState('');
+    const[location, setLocation] = React.useState('');
     const[price, setPrice] = React.useState('');
     const[condition, setCondition] = React.useState('');
     const[description, setDescription] = React.useState('');
@@ -39,15 +40,16 @@ import FormLabel from '@mui/material/FormLabel';
       event.preventDefault();
       let listing = {
         title: title,
-        isbn: ISBN,
-        authors: [author],
+        ISBN: ISBN,
+        location: location,
+        author: author,
         price: price,
-        imagePath: pictureSrc,
+        pictureSrc: pictureSrc,
         condition: condition,
         description: description,
-        ownerID:"",
+        ownerId: createRandomID("user"),
       };
-      const response = await fetch("http://localhost:3001/book", {
+      const response = await fetch("http://localhost:3000/create-listing", {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
@@ -142,6 +144,19 @@ import FormLabel from '@mui/material/FormLabel';
                 onChange={event => setPictureSrc(event.target.value)}
                 value={pictureSrc}
                 fullWidth
+                variant="standard" />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="location"
+                name="location"
+                label="Location(City)"
+                type='text'
+                onChange={event => setLocation(event.target.value)}
+                value={location}
+                fullWidth
+                autoComplete="shipping address-level2"
                 variant="standard" />
             </Grid>
             <Grid item xs={12} sm={6}>

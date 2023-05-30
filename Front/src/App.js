@@ -9,10 +9,6 @@ import SignIn from './pages/sign_up';
 import InboxPage from './pages/inbox';
 import SignUp from './Components/SignUp/SignUp';
 import Expanded_view from './pages/expanded_view';
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 function App() {
   //Makes browser declare page.
@@ -20,10 +16,6 @@ function App() {
     document.title = "Ommm - Home"
   })
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
   return (
     <>
       <Router>
