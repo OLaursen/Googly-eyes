@@ -48,7 +48,7 @@ import {createRandomID} from './Util';
         description: description,
         ownerId: createRandomID("user"),
       };
-      const response = await fetch("http://localhost:3000/create-listing", {
+      const response = await fetch("http://localhost:3001/book", {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
