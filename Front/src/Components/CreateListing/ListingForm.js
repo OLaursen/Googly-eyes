@@ -87,7 +87,7 @@ import {createRandomID} from './Util';
 
   return (
     <><form method="post" onSubmit={handleSubmit}>
-      <Container sx={{ paddingBottom: 5 }}>
+      <Container sx={{ paddingTop: 5, paddingBottom: 5 }}>
 
         <Box sx={{ height: '100vh' }}>
 

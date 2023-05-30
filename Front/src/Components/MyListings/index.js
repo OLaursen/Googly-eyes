@@ -1,4 +1,4 @@
-import { Divider, Typography } from "@mui/material";
+import { Divider } from "@mui/material";
 import ContentCarousel from "./MyListingsCarousel.jsx";
 
 import React, { useEffect, useState } from "react";

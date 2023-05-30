@@ -3,7 +3,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import { Box, Card, CardActionArea, CardContent } from '@mui/material';
 import { theme } from '../../styles/theme/theme';
-import { Block, MoreVert } from '@mui/icons-material';
+import { MoreVert } from '@mui/icons-material';
 
 const InboxCard = () => {
 

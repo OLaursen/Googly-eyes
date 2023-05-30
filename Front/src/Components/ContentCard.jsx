@@ -1,24 +1,16 @@
 import * as React from "react";
 import {
     Card,
-    CardHeader,
     CardMedia,
     CardContent,
-    CardActions,
-    Avatar,
     IconButton,
     Typography,
     styled,
-    Box,
-    Checkbox,
-    StepLabel,
     Container,
     Grid,
     Divider,
 } from "@mui/material";
-import { FavoriteBorder, Image, MoreVert } from "@mui/icons-material";
-import ShareIcon from "@mui/icons-material/Share";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+
 import SmsIcon from "@mui/icons-material/Sms";
 
 const ContentCard = (listingobj) => {
@@ -75,10 +67,7 @@ const ContentCard = (listingobj) => {
                         </Container>
 
                     </Container>
-                  
-                    
-                   
-                
+
                     <IconButton aria-label="Message buyer">
                     <SmsIcon />
 

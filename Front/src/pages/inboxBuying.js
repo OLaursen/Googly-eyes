@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import { Link, redirect, useNavigate } from 'react-router-dom'
+import { redirect, useNavigate } from 'react-router-dom'
 import NavBar from '../Components/NavBar/NavBar'
 import { Box, Container, Divider, Tab, Tabs, Typography } from '@mui/material'
 import { Sell, ShoppingCart } from '@mui/icons-material'
-import ContentCarousel from '../Components/ContentGrid/ContentCarousel'
-import { theme } from '../styles/theme/theme'
 import InboxCard from '../Components/InboxCard/InboxCard'
-import InboxPageSelling from './inboxSelling'
+
 
 const InboxPageBuying = () => {
     const navigate = useNavigate();

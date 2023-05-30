@@ -1,8 +1,7 @@
 import React from 'react'
-import { Box, Container, InputBase, Stack } from '@mui/material';
+import { Box, Container, InputBase} from '@mui/material';
 import Feed from '../Components/ContentGrid';
 import NavBar from '../Components/NavBar/NavBar';
-import styled from '@emotion/styled';
 import { theme } from '../styles/theme/theme';
 import { Search as SearchIcon } from '@mui/icons-material';
 

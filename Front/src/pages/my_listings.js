@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Box, Container, Divider, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Container, Divider, Typography } from "@mui/material";
 import NavBar from "../Components/NavBar/NavBar";
-import MyListingsCarousel from "../Components/MyListings/MyListingsCarousel";
+
 import {Feed} from "../Components/MyListings";
 
 const MyListing = () => {

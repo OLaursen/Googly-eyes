@@ -6,7 +6,6 @@ import {
   Sell,
 } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
-
 import {
   AppBar,
   Avatar,
@@ -19,7 +18,6 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-
 import React, { useState } from "react";
 import { theme } from "../../styles/theme/theme";
 import { Link } from "react-router-dom";

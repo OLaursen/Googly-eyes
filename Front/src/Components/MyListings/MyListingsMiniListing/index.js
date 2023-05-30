@@ -1,21 +1,18 @@
 import {
-  Box,
+
   Button,
   Card,
   CardActions,
   CardContent,
   CardMedia,
-  Container,
-  Divider,
   Grid,
   Modal,
-  TextField,
   Typography,
   styled,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
-import { Link } from "react-router-dom";
+
 
 
 const MyListingsSingleListing = (listingobj) => {
@@ -89,7 +86,6 @@ const MyListingsSingleListing = (listingobj) => {
 
         <CardActions>
           <Grid container direction="row" justifyContent={"space-between"}>
-            {/* <Link className="menu-link" to={"/expanded-view"}> */}
             <Button
               size="small"
               variant="outlined"
@@ -98,9 +94,6 @@ const MyListingsSingleListing = (listingobj) => {
             >
               Edit listing
             </Button>
-
-            {/* </Link> */}
-
             <Button
               size="small"
               variant="contained"

@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
 import NavBar from '../Components/NavBar/NavBar'
-import { Avatar, Box, Button, Card, CardActionArea, CardContent, CardMedia, Container, Divider, Grid, Tab, Tabs, TextField, Typography } from '@mui/material'
+import { Box, Container, Divider, Tab, Tabs, Typography } from '@mui/material'
 import { Sell, ShoppingCart } from '@mui/icons-material'
-import ContentCarousel from '../Components/ContentGrid/ContentCarousel'
-import { theme } from '../styles/theme/theme'
+
 import InboxCard from '../Components/InboxCard/InboxCard'
-import InboxPageBuying from './inboxBuying'
+
 
 const InboxPageSelling = () => {
     const [value, setValue] = useState(0);
