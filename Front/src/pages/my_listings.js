@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Box, Container, Divider, Tab, Tabs, Typography } from "@mui/material";
-import ContentCarousel from "../Components/ContentGrid/ContentCarousel";
 import NavBar from "../Components/NavBar/NavBar";
-import { Sell, ShoppingCart } from "@mui/icons-material";
-import MyListingsCarousel from "../../../src/Components/MyListings/MyListingsCarousel";
+import MyListingsCarousel from "../Components/MyListings/MyListingsCarousel";
 
 const MyListing = () => {
   const [value, setValue] = useState(0);

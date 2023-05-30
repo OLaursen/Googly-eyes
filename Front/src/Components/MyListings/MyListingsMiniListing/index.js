@@ -16,7 +16,7 @@ import {
 import { useTheme } from "@mui/material/styles";
 import React from "react";
 import { Link } from "react-router-dom";
-import ContentCard from "../../../../Front/src/Components/ContentCard";
+
 
 const MyListingsSingleListing = (listingobj) => {
   //Resources:
@@ -71,7 +71,7 @@ const MyListingsSingleListing = (listingobj) => {
               }}
               height="200"
               component={"img"}
-              src={listingobj.pictureSrc}
+              src={listingobj.imagePath}
             />
           </Grid>
 
